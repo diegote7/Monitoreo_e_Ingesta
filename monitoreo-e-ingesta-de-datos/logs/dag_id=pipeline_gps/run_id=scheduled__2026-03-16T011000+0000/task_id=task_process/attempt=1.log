@@ -1,0 +1,111 @@
+[2026-03-16T01:15:08.218+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pipeline_gps.task_process scheduled__2026-03-16T01:10:00+00:00 [queued]>
+[2026-03-16T01:15:08.230+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pipeline_gps.task_process scheduled__2026-03-16T01:10:00+00:00 [queued]>
+[2026-03-16T01:15:08.231+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2026-03-16T01:15:08.286+0000] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): task_process> on 2026-03-16 01:10:00+00:00
+[2026-03-16T01:15:08.298+0000] {standard_task_runner.py:60} INFO - Started process 309 to run task
+[2026-03-16T01:15:08.334+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'pipeline_gps', 'task_process', 'scheduled__2026-03-16T01:10:00+00:00', '--job-id', '546', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_gps.py', '--cfg-path', '/tmp/tmpt7ba8q8m']
+[2026-03-16T01:15:08.341+0000] {standard_task_runner.py:88} INFO - Job 546: Subtask task_process
+[2026-03-16T01:15:08.508+0000] {task_command.py:423} INFO - Running <TaskInstance: pipeline_gps.task_process scheduled__2026-03-16T01:10:00+00:00 [running]> on host 45f99552e120
+[2026-03-16T01:15:08.744+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='pipeline_gps' AIRFLOW_CTX_TASK_ID='task_process' AIRFLOW_CTX_EXECUTION_DATE='2026-03-16T01:10:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-16T01:10:00+00:00'
+[2026-03-16T01:15:08.747+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-03-16T01:15:08.749+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/airflow/spark/spark_processor.py']
+[2026-03-16T01:15:08.768+0000] {subprocess.py:86} INFO - Output:
+[2026-03-16T01:15:13.740+0000] {subprocess.py:93} INFO - 26/03/16 01:15:13 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2026-03-16T01:15:14.239+0000] {subprocess.py:93} INFO - 26/03/16 01:15:14 WARN DependencyUtils: Local jar /tmp/airflowtmpnmdi1zli/spark/jars/postgresql-42.7.3.jar does not exist, skipping.
+[2026-03-16T01:15:14.510+0000] {subprocess.py:93} INFO - 26/03/16 01:15:14 INFO SparkContext: Running Spark version 3.5.8
+[2026-03-16T01:15:14.512+0000] {subprocess.py:93} INFO - 26/03/16 01:15:14 INFO SparkContext: OS info Linux, 5.15.167.4-microsoft-standard-WSL2, amd64
+[2026-03-16T01:15:14.513+0000] {subprocess.py:93} INFO - 26/03/16 01:15:14 INFO SparkContext: Java version 17.0.18
+[2026-03-16T01:15:14.594+0000] {subprocess.py:93} INFO - 26/03/16 01:15:14 INFO ResourceUtils: ==============================================================
+[2026-03-16T01:15:14.595+0000] {subprocess.py:93} INFO - 26/03/16 01:15:14 INFO ResourceUtils: No custom resources configured for spark.driver.
+[2026-03-16T01:15:14.597+0000] {subprocess.py:93} INFO - 26/03/16 01:15:14 INFO ResourceUtils: ==============================================================
+[2026-03-16T01:15:14.598+0000] {subprocess.py:93} INFO - 26/03/16 01:15:14 INFO SparkContext: Submitted application: gps_processor
+[2026-03-16T01:15:14.656+0000] {subprocess.py:93} INFO - 26/03/16 01:15:14 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[2026-03-16T01:15:14.675+0000] {subprocess.py:93} INFO - 26/03/16 01:15:14 INFO ResourceProfile: Limiting resource is cpu
+[2026-03-16T01:15:14.677+0000] {subprocess.py:93} INFO - 26/03/16 01:15:14 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[2026-03-16T01:15:14.804+0000] {subprocess.py:93} INFO - 26/03/16 01:15:14 INFO SecurityManager: Changing view acls to: airflow
+[2026-03-16T01:15:14.805+0000] {subprocess.py:93} INFO - 26/03/16 01:15:14 INFO SecurityManager: Changing modify acls to: airflow
+[2026-03-16T01:15:14.807+0000] {subprocess.py:93} INFO - 26/03/16 01:15:14 INFO SecurityManager: Changing view acls groups to:
+[2026-03-16T01:15:14.809+0000] {subprocess.py:93} INFO - 26/03/16 01:15:14 INFO SecurityManager: Changing modify acls groups to:
+[2026-03-16T01:15:14.811+0000] {subprocess.py:93} INFO - 26/03/16 01:15:14 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: airflow; groups with view permissions: EMPTY; users with modify permissions: airflow; groups with modify permissions: EMPTY
+[2026-03-16T01:15:15.698+0000] {subprocess.py:93} INFO - 26/03/16 01:15:15 INFO Utils: Successfully started service 'sparkDriver' on port 33553.
+[2026-03-16T01:15:15.821+0000] {subprocess.py:93} INFO - 26/03/16 01:15:15 INFO SparkEnv: Registering MapOutputTracker
+[2026-03-16T01:15:16.071+0000] {subprocess.py:93} INFO - 26/03/16 01:15:16 INFO SparkEnv: Registering BlockManagerMaster
+[2026-03-16T01:15:16.161+0000] {subprocess.py:93} INFO - 26/03/16 01:15:16 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[2026-03-16T01:15:16.164+0000] {subprocess.py:93} INFO - 26/03/16 01:15:16 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[2026-03-16T01:15:16.184+0000] {subprocess.py:93} INFO - 26/03/16 01:15:16 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+[2026-03-16T01:15:16.333+0000] {subprocess.py:93} INFO - 26/03/16 01:15:16 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-837d9f26-e6f0-41ec-87c3-d021c6c71e9c
+[2026-03-16T01:15:16.376+0000] {subprocess.py:93} INFO - 26/03/16 01:15:16 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+[2026-03-16T01:15:16.418+0000] {subprocess.py:93} INFO - 26/03/16 01:15:16 INFO SparkEnv: Registering OutputCommitCoordinator
+[2026-03-16T01:15:16.791+0000] {subprocess.py:93} INFO - 26/03/16 01:15:16 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+[2026-03-16T01:15:16.971+0000] {subprocess.py:93} INFO - 26/03/16 01:15:16 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+[2026-03-16T01:15:17.069+0000] {subprocess.py:93} INFO - 26/03/16 01:15:17 ERROR SparkContext: Failed to add spark/jars/postgresql-42.7.3.jar to Spark environment
+[2026-03-16T01:15:17.070+0000] {subprocess.py:93} INFO - java.io.FileNotFoundException: Jar /tmp/airflowtmpnmdi1zli/spark/jars/postgresql-42.7.3.jar not found
+[2026-03-16T01:15:17.070+0000] {subprocess.py:93} INFO - 	at org.apache.spark.SparkContext.addLocalJarFile$1(SparkContext.scala:2095)
+[2026-03-16T01:15:17.070+0000] {subprocess.py:93} INFO - 	at org.apache.spark.SparkContext.addJar(SparkContext.scala:2151)
+[2026-03-16T01:15:17.070+0000] {subprocess.py:93} INFO - 	at org.apache.spark.SparkContext.$anonfun$new$15(SparkContext.scala:521)
+[2026-03-16T01:15:17.071+0000] {subprocess.py:93} INFO - 	at org.apache.spark.SparkContext.$anonfun$new$15$adapted(SparkContext.scala:521)
+[2026-03-16T01:15:17.071+0000] {subprocess.py:93} INFO - 	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+[2026-03-16T01:15:17.071+0000] {subprocess.py:93} INFO - 	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+[2026-03-16T01:15:17.072+0000] {subprocess.py:93} INFO - 	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+[2026-03-16T01:15:17.072+0000] {subprocess.py:93} INFO - 	at org.apache.spark.SparkContext.<init>(SparkContext.scala:521)
+[2026-03-16T01:15:17.072+0000] {subprocess.py:93} INFO - 	at org.apache.spark.api.java.JavaSparkContext.<init>(JavaSparkContext.scala:58)
+[2026-03-16T01:15:17.072+0000] {subprocess.py:93} INFO - 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+[2026-03-16T01:15:17.073+0000] {subprocess.py:93} INFO - 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+[2026-03-16T01:15:17.073+0000] {subprocess.py:93} INFO - 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+[2026-03-16T01:15:17.074+0000] {subprocess.py:93} INFO - 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+[2026-03-16T01:15:17.074+0000] {subprocess.py:93} INFO - 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+[2026-03-16T01:15:17.074+0000] {subprocess.py:93} INFO - 	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:247)
+[2026-03-16T01:15:17.075+0000] {subprocess.py:93} INFO - 	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+[2026-03-16T01:15:17.075+0000] {subprocess.py:93} INFO - 	at py4j.Gateway.invoke(Gateway.java:238)
+[2026-03-16T01:15:17.075+0000] {subprocess.py:93} INFO - 	at py4j.commands.ConstructorCommand.invokeConstructor(ConstructorCommand.java:80)
+[2026-03-16T01:15:17.075+0000] {subprocess.py:93} INFO - 	at py4j.commands.ConstructorCommand.execute(ConstructorCommand.java:69)
+[2026-03-16T01:15:17.076+0000] {subprocess.py:93} INFO - 	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+[2026-03-16T01:15:17.076+0000] {subprocess.py:93} INFO - 	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+[2026-03-16T01:15:17.076+0000] {subprocess.py:93} INFO - 	at java.base/java.lang.Thread.run(Thread.java:840)
+[2026-03-16T01:15:17.257+0000] {subprocess.py:93} INFO - 26/03/16 01:15:17 INFO Executor: Starting executor ID driver on host 45f99552e120
+[2026-03-16T01:15:17.258+0000] {subprocess.py:93} INFO - 26/03/16 01:15:17 INFO Executor: OS info Linux, 5.15.167.4-microsoft-standard-WSL2, amd64
+[2026-03-16T01:15:17.260+0000] {subprocess.py:93} INFO - 26/03/16 01:15:17 INFO Executor: Java version 17.0.18
+[2026-03-16T01:15:17.275+0000] {subprocess.py:93} INFO - 26/03/16 01:15:17 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+[2026-03-16T01:15:17.277+0000] {subprocess.py:93} INFO - 26/03/16 01:15:17 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@aae43b for default.
+[2026-03-16T01:15:17.330+0000] {subprocess.py:93} INFO - 26/03/16 01:15:17 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 45851.
+[2026-03-16T01:15:17.330+0000] {subprocess.py:93} INFO - 26/03/16 01:15:17 INFO NettyBlockTransferService: Server created on 45f99552e120:45851
+[2026-03-16T01:15:17.336+0000] {subprocess.py:93} INFO - 26/03/16 01:15:17 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[2026-03-16T01:15:17.355+0000] {subprocess.py:93} INFO - 26/03/16 01:15:17 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 45f99552e120, 45851, None)
+[2026-03-16T01:15:17.367+0000] {subprocess.py:93} INFO - 26/03/16 01:15:17 INFO BlockManagerMasterEndpoint: Registering block manager 45f99552e120:45851 with 434.4 MiB RAM, BlockManagerId(driver, 45f99552e120, 45851, None)
+[2026-03-16T01:15:17.371+0000] {subprocess.py:93} INFO - 26/03/16 01:15:17 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 45f99552e120, 45851, None)
+[2026-03-16T01:15:17.374+0000] {subprocess.py:93} INFO - 26/03/16 01:15:17 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 45f99552e120, 45851, None)
+[2026-03-16T01:15:19.932+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2026-03-16T01:15:19.932+0000] {subprocess.py:93} INFO -   File "/opt/airflow/spark/spark_processor.py", line 10, in <module>
+[2026-03-16T01:15:19.933+0000] {subprocess.py:93} INFO -     conn = psycopg2.connect(
+[2026-03-16T01:15:19.933+0000] {subprocess.py:93} INFO -   File "/home/airflow/.local/lib/python3.8/site-packages/psycopg2/__init__.py", line 122, in connect
+[2026-03-16T01:15:19.933+0000] {subprocess.py:93} INFO -     conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+[2026-03-16T01:15:19.933+0000] {subprocess.py:93} INFO - psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused
+[2026-03-16T01:15:19.934+0000] {subprocess.py:93} INFO - 	Is the server running on that host and accepting TCP/IP connections?
+[2026-03-16T01:15:19.934+0000] {subprocess.py:93} INFO - connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+[2026-03-16T01:15:19.934+0000] {subprocess.py:93} INFO - 	Is the server running on that host and accepting TCP/IP connections?
+[2026-03-16T01:15:19.934+0000] {subprocess.py:93} INFO - 
+[2026-03-16T01:15:20.038+0000] {subprocess.py:93} INFO - 26/03/16 01:15:20 INFO SparkContext: Invoking stop() from shutdown hook
+[2026-03-16T01:15:20.039+0000] {subprocess.py:93} INFO - 26/03/16 01:15:20 INFO SparkContext: SparkContext is stopping with exitCode 0.
+[2026-03-16T01:15:20.068+0000] {subprocess.py:93} INFO - 26/03/16 01:15:20 INFO SparkUI: Stopped Spark web UI at http://45f99552e120:4040
+[2026-03-16T01:15:20.098+0000] {subprocess.py:93} INFO - 26/03/16 01:15:20 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+[2026-03-16T01:15:20.125+0000] {subprocess.py:93} INFO - 26/03/16 01:15:20 INFO MemoryStore: MemoryStore cleared
+[2026-03-16T01:15:20.126+0000] {subprocess.py:93} INFO - 26/03/16 01:15:20 INFO BlockManager: BlockManager stopped
+[2026-03-16T01:15:20.139+0000] {subprocess.py:93} INFO - 26/03/16 01:15:20 INFO BlockManagerMaster: BlockManagerMaster stopped
+[2026-03-16T01:15:20.147+0000] {subprocess.py:93} INFO - 26/03/16 01:15:20 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+[2026-03-16T01:15:20.169+0000] {subprocess.py:93} INFO - 26/03/16 01:15:20 INFO SparkContext: Successfully stopped SparkContext
+[2026-03-16T01:15:20.172+0000] {subprocess.py:93} INFO - 26/03/16 01:15:20 INFO ShutdownHookManager: Shutdown hook called
+[2026-03-16T01:15:20.176+0000] {subprocess.py:93} INFO - 26/03/16 01:15:20 INFO ShutdownHookManager: Deleting directory /tmp/spark-1a83b88d-40ee-4022-9437-6c6f51fd2fef/pyspark-47309640-9a9e-4195-a6f9-b513f6592084
+[2026-03-16T01:15:20.199+0000] {subprocess.py:93} INFO - 26/03/16 01:15:20 INFO ShutdownHookManager: Deleting directory /tmp/spark-1a83b88d-40ee-4022-9437-6c6f51fd2fef
+[2026-03-16T01:15:20.211+0000] {subprocess.py:93} INFO - 26/03/16 01:15:20 INFO ShutdownHookManager: Deleting directory /tmp/spark-74cee251-455d-44bf-9a71-09c74d23dce2
+[2026-03-16T01:15:20.636+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2026-03-16T01:15:20.685+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 212, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2026-03-16T01:15:20.702+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=pipeline_gps, task_id=task_process, execution_date=20260316T011000, start_date=20260316T011508, end_date=20260316T011520
+[2026-03-16T01:15:20.744+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 546 for task task_process (Bash command failed. The command returned a non-zero exit code 1.; 309)
+[2026-03-16T01:15:20.771+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2026-03-16T01:15:20.803+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

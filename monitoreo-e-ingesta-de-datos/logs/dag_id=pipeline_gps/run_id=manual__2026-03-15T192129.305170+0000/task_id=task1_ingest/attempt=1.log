@@ -1,0 +1,13 @@
+[2026-03-15T19:57:48.552+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pipeline_gps.task1_ingest manual__2026-03-15T19:21:29.305170+00:00 [queued]>
+[2026-03-15T19:57:48.568+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pipeline_gps.task1_ingest manual__2026-03-15T19:21:29.305170+00:00 [queued]>
+[2026-03-15T19:57:48.568+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2026-03-15T19:57:48.601+0000] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): task1_ingest> on 2026-03-15 19:21:29.305170+00:00
+[2026-03-15T19:57:48.609+0000] {standard_task_runner.py:60} INFO - Started process 30 to run task
+[2026-03-15T19:57:48.620+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'pipeline_gps', 'task1_ingest', 'manual__2026-03-15T19:21:29.305170+00:00', '--job-id', '499', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_gps.py', '--cfg-path', '/tmp/tmp6g876iob']
+[2026-03-15T19:57:48.626+0000] {standard_task_runner.py:88} INFO - Job 499: Subtask task1_ingest
+[2026-03-15T19:57:48.749+0000] {task_command.py:423} INFO - Running <TaskInstance: pipeline_gps.task1_ingest manual__2026-03-15T19:21:29.305170+00:00 [running]> on host 693df5566a25
+[2026-03-15T19:57:48.930+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='pipeline_gps' AIRFLOW_CTX_TASK_ID='task1_ingest' AIRFLOW_CTX_EXECUTION_DATE='2026-03-15T19:21:29.305170+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-03-15T19:21:29.305170+00:00'
+[2026-03-15T19:57:48.933+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-03-15T19:57:48.935+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\n        export DB_HOST=postgres-postgis\n        export MQTT_HOST=mqtt-broker\n        python /opt/airflow/ingestion/mqtt_ingestor.py\n        ']
+[2026-03-15T19:57:48.961+0000] {subprocess.py:86} INFO - Output:
+[2026-03-15T20:08:36.266+0000] {local_task_job_runner.py:121} ERROR - Received SIGTERM. Terminating subprocesses

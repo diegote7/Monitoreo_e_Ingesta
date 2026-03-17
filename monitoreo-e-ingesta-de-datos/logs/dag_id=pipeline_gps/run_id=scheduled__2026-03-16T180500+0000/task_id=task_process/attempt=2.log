@@ -1,0 +1,349 @@
+[2026-03-16T18:25:29.375+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pipeline_gps.task_process scheduled__2026-03-16T18:05:00+00:00 [queued]>
+[2026-03-16T18:25:29.415+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pipeline_gps.task_process scheduled__2026-03-16T18:05:00+00:00 [queued]>
+[2026-03-16T18:25:29.416+0000] {taskinstance.py:2170} INFO - Starting attempt 2 of 1
+[2026-03-16T18:25:29.507+0000] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): task_process> on 2026-03-16 18:05:00+00:00
+[2026-03-16T18:25:29.527+0000] {standard_task_runner.py:60} INFO - Started process 172 to run task
+[2026-03-16T18:25:29.585+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'pipeline_gps', 'task_process', 'scheduled__2026-03-16T18:05:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_gps.py', '--cfg-path', '/tmp/tmpbk42zr03']
+[2026-03-16T18:25:29.623+0000] {standard_task_runner.py:88} INFO - Job 6: Subtask task_process
+[2026-03-16T18:25:30.911+0000] {task_command.py:423} INFO - Running <TaskInstance: pipeline_gps.task_process scheduled__2026-03-16T18:05:00+00:00 [running]> on host 95dbc7519d7f
+[2026-03-16T18:25:32.407+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='pipeline_gps' AIRFLOW_CTX_TASK_ID='task_process' AIRFLOW_CTX_EXECUTION_DATE='2026-03-16T18:05:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-16T18:05:00+00:00'
+[2026-03-16T18:25:32.410+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-03-16T18:25:32.427+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/airflow/spark/spark_processor.py']
+[2026-03-16T18:25:32.546+0000] {subprocess.py:86} INFO - Output:
+[2026-03-16T18:25:58.822+0000] {subprocess.py:93} INFO - 26/03/16 18:25:58 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2026-03-16T18:26:01.298+0000] {subprocess.py:93} INFO - Setting default log level to "WARN".
+[2026-03-16T18:26:01.299+0000] {subprocess.py:93} INFO - To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+[2026-03-16T18:29:57.893+0000] {job.py:213} ERROR - Job heartbeat got an exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+    return fn()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+    return self._create_connection()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.8/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: could not translate host name "postgres-postgis" to address: Temporary failure in name resolution
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/jobs/job.py", line 187, in heartbeat
+    self._merge_from(Job._fetch_from_db(self, session))
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/api_internal/internal_api_call.py", line 114, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/jobs/job.py", line 308, in _fetch_from_db
+    session.merge(job)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 3056, in merge
+    return self._merge(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 3136, in _merge
+    merged = self.get(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 2853, in get
+    return self._get_impl(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 2975, in _get_impl
+    return db_load_fn(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/orm/loading.py", line 530, in load_on_pk_identity
+    session.execute(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1716, in execute
+    conn = self._connection_for_bind(bind)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1555, in _connection_for_bind
+    return self._transaction._connection_for_bind(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 750, in _connection_for_bind
+    conn = bind.connect()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/future/engine.py", line 412, in connect
+    return super(Engine, self).connect()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3325, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3404, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3374, in _wrap_pool_connect
+    Connection._handle_dbapi_exception_noconnection(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 2208, in _handle_dbapi_exception_noconnection
+    util.raise_(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+    return fn()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+    return self._create_connection()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.8/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) could not translate host name "postgres-postgis" to address: Temporary failure in name resolution
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+[2026-03-16T18:29:58.086+0000] {job.py:221} ERROR - Job heartbeat failed with error. Scheduler is in unhealthy state
+[2026-03-16T18:30:13.384+0000] {job.py:221} ERROR - Job heartbeat failed with error. Scheduler is in unhealthy state
+[2026-03-16T18:30:28.693+0000] {job.py:221} ERROR - Job heartbeat failed with error. Scheduler is in unhealthy state
+[2026-03-16T18:30:45.899+0000] {job.py:221} ERROR - Job heartbeat failed with error. Scheduler is in unhealthy state
+[2026-03-16T18:31:01.263+0000] {job.py:221} ERROR - Job heartbeat failed with error. Scheduler is in unhealthy state
+[2026-03-16T18:31:17.954+0000] {job.py:221} ERROR - Job heartbeat failed with error. Scheduler is in unhealthy state
+[2026-03-16T18:31:24.298+0000] {subprocess.py:93} INFO - [Stage 0:>                                                          (0 + 0) / 1][Stage 0:>                                                          (0 + 1) / 1][Stage 0:===========================================================(1 + 0) / 1][Stage 2:>                                                          (0 + 0) / 1][Stage 2:>                                                          (0 + 1) / 1]                                                                                [Stage 3:>                                                          (0 + 1) / 1][Stage 5:>                                                          (0 + 1) / 1]                                                                                [Stage 6:>                                                          (0 + 1) / 1]                                                                                [Stage 9:>                                                          (0 + 1) / 1][Stage 11:>                                                         (0 + 1) / 1]                                                                                ❌ Error: syntax error at or near "registros"
+[2026-03-16T18:31:24.553+0000] {subprocess.py:93} INFO - LINE 4:                 total_ registros, periodo_inicio, periodo_fi...
+[2026-03-16T18:31:24.559+0000] {subprocess.py:93} INFO -                                ^
+[2026-03-16T18:31:24.559+0000] {subprocess.py:93} INFO - 
+[2026-03-16T18:31:24.560+0000] {subprocess.py:93} INFO - ❌ Error: syntax error at or near "registros"
+[2026-03-16T18:31:24.561+0000] {subprocess.py:93} INFO - LINE 4:                 total_ registros, periodo_inicio, periodo_fi...
+[2026-03-16T18:31:24.562+0000] {subprocess.py:93} INFO -                                ^
+[2026-03-16T18:31:24.562+0000] {subprocess.py:93} INFO - 
+[2026-03-16T18:31:24.563+0000] {subprocess.py:93} INFO - ❌ Error: syntax error at or near "registros"
+[2026-03-16T18:31:24.563+0000] {subprocess.py:93} INFO - LINE 4:                 total_ registros, periodo_inicio, periodo_fi...
+[2026-03-16T18:31:24.564+0000] {subprocess.py:93} INFO -                                ^
+[2026-03-16T18:31:24.564+0000] {subprocess.py:93} INFO - 
+[2026-03-16T18:31:24.565+0000] {subprocess.py:93} INFO - ❌ Error: syntax error at or near "registros"
+[2026-03-16T18:31:24.565+0000] {subprocess.py:93} INFO - LINE 4:                 total_ registros, periodo_inicio, periodo_fi...
+[2026-03-16T18:31:24.566+0000] {subprocess.py:93} INFO -                                ^
+[2026-03-16T18:31:24.567+0000] {subprocess.py:93} INFO - 
+[2026-03-16T18:31:24.568+0000] {subprocess.py:93} INFO - ❌ Error: An error occurred while calling o82.load.
+[2026-03-16T18:31:24.573+0000] {subprocess.py:93} INFO - : org.postgresql.util.PSQLException: The connection attempt failed.
+[2026-03-16T18:31:24.574+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:358)
+[2026-03-16T18:31:24.575+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+[2026-03-16T18:31:24.575+0000] {subprocess.py:93} INFO - 	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:273)
+[2026-03-16T18:31:24.576+0000] {subprocess.py:93} INFO - 	at org.postgresql.Driver.makeConnection(Driver.java:446)
+[2026-03-16T18:31:24.577+0000] {subprocess.py:93} INFO - 	at org.postgresql.Driver.connect(Driver.java:298)
+[2026-03-16T18:31:24.578+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.connection.BasicConnectionProvider.getConnection(BasicConnectionProvider.scala:49)
+[2026-03-16T18:31:24.580+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.connection.ConnectionProviderBase.create(ConnectionProvider.scala:102)
+[2026-03-16T18:31:24.581+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.jdbc.JdbcDialect.$anonfun$createConnectionFactory$1(JdbcDialects.scala:161)
+[2026-03-16T18:31:24.581+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.jdbc.JdbcDialect.$anonfun$createConnectionFactory$1$adapted(JdbcDialects.scala:157)
+[2026-03-16T18:31:24.582+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JDBCRDD$.getQueryOutputSchema(JDBCRDD.scala:63)
+[2026-03-16T18:31:24.582+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JDBCRDD$.resolveTable(JDBCRDD.scala:58)
+[2026-03-16T18:31:24.583+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JDBCRelation$.getSchema(JDBCRelation.scala:241)
+[2026-03-16T18:31:24.583+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JdbcRelationProvider.createRelation(JdbcRelationProvider.scala:37)
+[2026-03-16T18:31:24.584+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.DataSource.resolveRelation(DataSource.scala:346)
+[2026-03-16T18:31:24.584+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.DataFrameReader.loadV1Source(DataFrameReader.scala:229)
+[2026-03-16T18:31:24.584+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.DataFrameReader.$anonfun$load$2(DataFrameReader.scala:211)
+[2026-03-16T18:31:24.585+0000] {subprocess.py:93} INFO - 	at scala.Option.getOrElse(Option.scala:189)
+[2026-03-16T18:31:24.586+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.DataFrameReader.load(DataFrameReader.scala:211)
+[2026-03-16T18:31:24.586+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.DataFrameReader.load(DataFrameReader.scala:172)
+[2026-03-16T18:31:24.587+0000] {subprocess.py:93} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[2026-03-16T18:31:24.598+0000] {subprocess.py:93} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+[2026-03-16T18:31:24.598+0000] {subprocess.py:93} INFO - 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[2026-03-16T18:31:24.599+0000] {subprocess.py:93} INFO - 	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+[2026-03-16T18:31:24.599+0000] {subprocess.py:93} INFO - 	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+[2026-03-16T18:31:24.600+0000] {subprocess.py:93} INFO - 	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+[2026-03-16T18:31:24.600+0000] {subprocess.py:93} INFO - 	at py4j.Gateway.invoke(Gateway.java:282)
+[2026-03-16T18:31:24.601+0000] {subprocess.py:93} INFO - 	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+[2026-03-16T18:31:24.601+0000] {subprocess.py:93} INFO - 	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+[2026-03-16T18:31:24.602+0000] {subprocess.py:93} INFO - 	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+[2026-03-16T18:31:24.603+0000] {subprocess.py:93} INFO - 	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+[2026-03-16T18:31:24.603+0000] {subprocess.py:93} INFO - 	at java.base/java.lang.Thread.run(Thread.java:840)
+[2026-03-16T18:31:24.604+0000] {subprocess.py:93} INFO - Caused by: java.net.UnknownHostException: postgres-postgis
+[2026-03-16T18:31:24.604+0000] {subprocess.py:93} INFO - 	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:572)
+[2026-03-16T18:31:24.605+0000] {subprocess.py:93} INFO - 	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+[2026-03-16T18:31:24.605+0000] {subprocess.py:93} INFO - 	at java.base/java.net.Socket.connect(Socket.java:633)
+[2026-03-16T18:31:24.606+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.PGStream.createSocket(PGStream.java:243)
+[2026-03-16T18:31:24.607+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.PGStream.<init>(PGStream.java:98)
+[2026-03-16T18:31:24.619+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:136)
+[2026-03-16T18:31:24.619+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:262)
+[2026-03-16T18:31:24.620+0000] {subprocess.py:93} INFO - 	... 30 more
+[2026-03-16T18:31:24.621+0000] {subprocess.py:93} INFO - 
+[2026-03-16T18:31:24.621+0000] {subprocess.py:93} INFO - ❌ Error: An error occurred while calling o91.load.
+[2026-03-16T18:31:24.621+0000] {subprocess.py:93} INFO - : org.postgresql.util.PSQLException: The connection attempt failed.
+[2026-03-16T18:31:24.635+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:358)
+[2026-03-16T18:31:24.636+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+[2026-03-16T18:31:24.637+0000] {subprocess.py:93} INFO - 	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:273)
+[2026-03-16T18:31:24.638+0000] {subprocess.py:93} INFO - 	at org.postgresql.Driver.makeConnection(Driver.java:446)
+[2026-03-16T18:31:24.639+0000] {subprocess.py:93} INFO - 	at org.postgresql.Driver.connect(Driver.java:298)
+[2026-03-16T18:31:24.648+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.connection.BasicConnectionProvider.getConnection(BasicConnectionProvider.scala:49)
+[2026-03-16T18:31:24.649+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.connection.ConnectionProviderBase.create(ConnectionProvider.scala:102)
+[2026-03-16T18:31:24.652+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.jdbc.JdbcDialect.$anonfun$createConnectionFactory$1(JdbcDialects.scala:161)
+[2026-03-16T18:31:24.653+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.jdbc.JdbcDialect.$anonfun$createConnectionFactory$1$adapted(JdbcDialects.scala:157)
+[2026-03-16T18:31:24.653+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JDBCRDD$.getQueryOutputSchema(JDBCRDD.scala:63)
+[2026-03-16T18:31:24.654+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JDBCRDD$.resolveTable(JDBCRDD.scala:58)
+[2026-03-16T18:31:24.654+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JDBCRelation$.getSchema(JDBCRelation.scala:241)
+[2026-03-16T18:31:24.655+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JdbcRelationProvider.createRelation(JdbcRelationProvider.scala:37)
+[2026-03-16T18:31:24.655+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.DataSource.resolveRelation(DataSource.scala:346)
+[2026-03-16T18:31:24.656+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.DataFrameReader.loadV1Source(DataFrameReader.scala:229)
+[2026-03-16T18:31:24.657+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.DataFrameReader.$anonfun$load$2(DataFrameReader.scala:211)
+[2026-03-16T18:31:24.658+0000] {subprocess.py:93} INFO - 	at scala.Option.getOrElse(Option.scala:189)
+[2026-03-16T18:31:24.659+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.DataFrameReader.load(DataFrameReader.scala:211)
+[2026-03-16T18:31:24.660+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.DataFrameReader.load(DataFrameReader.scala:172)
+[2026-03-16T18:31:24.673+0000] {subprocess.py:93} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[2026-03-16T18:31:24.673+0000] {subprocess.py:93} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+[2026-03-16T18:31:24.674+0000] {subprocess.py:93} INFO - 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[2026-03-16T18:31:24.674+0000] {subprocess.py:93} INFO - 	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+[2026-03-16T18:31:24.675+0000] {subprocess.py:93} INFO - 	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+[2026-03-16T18:31:24.676+0000] {subprocess.py:93} INFO - 	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+[2026-03-16T18:31:24.677+0000] {subprocess.py:93} INFO - 	at py4j.Gateway.invoke(Gateway.java:282)
+[2026-03-16T18:31:24.677+0000] {subprocess.py:93} INFO - 	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+[2026-03-16T18:31:24.678+0000] {subprocess.py:93} INFO - 	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+[2026-03-16T18:31:24.678+0000] {subprocess.py:93} INFO - 	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+[2026-03-16T18:31:24.679+0000] {subprocess.py:93} INFO - 	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+[2026-03-16T18:31:24.679+0000] {subprocess.py:93} INFO - 	at java.base/java.lang.Thread.run(Thread.java:840)
+[2026-03-16T18:31:24.680+0000] {subprocess.py:93} INFO - Caused by: java.net.UnknownHostException: postgres-postgis
+[2026-03-16T18:31:24.681+0000] {subprocess.py:93} INFO - 	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:572)
+[2026-03-16T18:31:24.694+0000] {subprocess.py:93} INFO - 	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+[2026-03-16T18:31:24.696+0000] {subprocess.py:93} INFO - 	at java.base/java.net.Socket.connect(Socket.java:633)
+[2026-03-16T18:31:24.698+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.PGStream.createSocket(PGStream.java:243)
+[2026-03-16T18:31:24.699+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.PGStream.<init>(PGStream.java:98)
+[2026-03-16T18:31:24.700+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:136)
+[2026-03-16T18:31:24.701+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:262)
+[2026-03-16T18:31:24.701+0000] {subprocess.py:93} INFO - 	... 30 more
+[2026-03-16T18:31:24.702+0000] {subprocess.py:93} INFO - 
+[2026-03-16T18:31:32.406+0000] {job.py:221} ERROR - Job heartbeat failed with error. Scheduler is in unhealthy state
+[2026-03-16T18:31:48.243+0000] {job.py:221} ERROR - Job heartbeat failed with error. Scheduler is in unhealthy state
+[2026-03-16T18:32:03.509+0000] {job.py:221} ERROR - Job heartbeat failed with error. Scheduler is in unhealthy state
+[2026-03-16T18:32:19.398+0000] {job.py:221} ERROR - Job heartbeat failed with error. Scheduler is in unhealthy state
+[2026-03-16T18:32:34.551+0000] {job.py:221} ERROR - Job heartbeat failed with error. Scheduler is in unhealthy state
+[2026-03-16T18:32:51.319+0000] {job.py:221} ERROR - Job heartbeat failed with error. Scheduler is in unhealthy state
+[2026-03-16T18:33:05.718+0000] {job.py:221} ERROR - Job heartbeat failed with error. Scheduler is in unhealthy state
+[2026-03-16T18:33:21.573+0000] {job.py:221} ERROR - Job heartbeat failed with error. Scheduler is in unhealthy state
+[2026-03-16T18:33:34.556+0000] {subprocess.py:93} INFO - ❌ Error: An error occurred while calling o100.load.
+[2026-03-16T18:33:35.305+0000] {subprocess.py:93} INFO - : org.postgresql.util.PSQLException: The connection attempt failed.
+[2026-03-16T18:33:35.434+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:358)
+[2026-03-16T18:33:35.437+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+[2026-03-16T18:33:35.437+0000] {subprocess.py:93} INFO - 	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:273)
+[2026-03-16T18:33:35.438+0000] {subprocess.py:93} INFO - 	at org.postgresql.Driver.makeConnection(Driver.java:446)
+[2026-03-16T18:33:35.438+0000] {subprocess.py:93} INFO - 	at org.postgresql.Driver.connect(Driver.java:298)
+[2026-03-16T18:33:35.439+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.connection.BasicConnectionProvider.getConnection(BasicConnectionProvider.scala:49)
+[2026-03-16T18:33:35.439+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.connection.ConnectionProviderBase.create(ConnectionProvider.scala:102)
+[2026-03-16T18:33:35.440+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.jdbc.JdbcDialect.$anonfun$createConnectionFactory$1(JdbcDialects.scala:161)
+[2026-03-16T18:33:35.440+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.jdbc.JdbcDialect.$anonfun$createConnectionFactory$1$adapted(JdbcDialects.scala:157)
+[2026-03-16T18:33:35.441+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JDBCRDD$.getQueryOutputSchema(JDBCRDD.scala:63)
+[2026-03-16T18:33:35.441+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JDBCRDD$.resolveTable(JDBCRDD.scala:58)
+[2026-03-16T18:33:35.456+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JDBCRelation$.getSchema(JDBCRelation.scala:241)
+[2026-03-16T18:33:35.457+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JdbcRelationProvider.createRelation(JdbcRelationProvider.scala:37)
+[2026-03-16T18:33:35.458+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.DataSource.resolveRelation(DataSource.scala:346)
+[2026-03-16T18:33:35.458+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.DataFrameReader.loadV1Source(DataFrameReader.scala:229)
+[2026-03-16T18:33:35.459+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.DataFrameReader.$anonfun$load$2(DataFrameReader.scala:211)
+[2026-03-16T18:33:35.459+0000] {subprocess.py:93} INFO - 	at scala.Option.getOrElse(Option.scala:189)
+[2026-03-16T18:33:35.460+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.DataFrameReader.load(DataFrameReader.scala:211)
+[2026-03-16T18:33:35.460+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.DataFrameReader.load(DataFrameReader.scala:172)
+[2026-03-16T18:33:35.461+0000] {subprocess.py:93} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[2026-03-16T18:33:35.474+0000] {subprocess.py:93} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+[2026-03-16T18:33:35.477+0000] {subprocess.py:93} INFO - 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[2026-03-16T18:33:35.494+0000] {subprocess.py:93} INFO - 	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+[2026-03-16T18:33:35.495+0000] {subprocess.py:93} INFO - 	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+[2026-03-16T18:33:35.496+0000] {subprocess.py:93} INFO - 	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+[2026-03-16T18:33:35.496+0000] {subprocess.py:93} INFO - 	at py4j.Gateway.invoke(Gateway.java:282)
+[2026-03-16T18:33:35.497+0000] {subprocess.py:93} INFO - 	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+[2026-03-16T18:33:35.534+0000] {subprocess.py:93} INFO - 	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+[2026-03-16T18:33:35.535+0000] {subprocess.py:93} INFO - 	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+[2026-03-16T18:33:35.541+0000] {subprocess.py:93} INFO - 	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+[2026-03-16T18:33:35.571+0000] {subprocess.py:93} INFO - 	at java.base/java.lang.Thread.run(Thread.java:840)
+[2026-03-16T18:33:35.572+0000] {subprocess.py:93} INFO - Caused by: java.net.UnknownHostException: postgres-postgis
+[2026-03-16T18:33:35.573+0000] {subprocess.py:93} INFO - 	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:572)
+[2026-03-16T18:33:35.573+0000] {subprocess.py:93} INFO - 	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+[2026-03-16T18:33:35.574+0000] {subprocess.py:93} INFO - 	at java.base/java.net.Socket.connect(Socket.java:633)
+[2026-03-16T18:33:35.588+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.PGStream.createSocket(PGStream.java:243)
+[2026-03-16T18:33:35.589+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.PGStream.<init>(PGStream.java:98)
+[2026-03-16T18:33:35.590+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:136)
+[2026-03-16T18:33:35.590+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:262)
+[2026-03-16T18:33:35.591+0000] {subprocess.py:93} INFO - 	... 30 more
+[2026-03-16T18:33:35.592+0000] {subprocess.py:93} INFO - 
+[2026-03-16T18:33:35.613+0000] {subprocess.py:93} INFO - ❌ Error: An error occurred while calling o109.load.
+[2026-03-16T18:33:35.622+0000] {subprocess.py:93} INFO - : org.postgresql.util.PSQLException: The connection attempt failed.
+[2026-03-16T18:33:35.623+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:358)
+[2026-03-16T18:33:35.634+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+[2026-03-16T18:33:35.644+0000] {subprocess.py:93} INFO - 	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:273)
+[2026-03-16T18:33:35.645+0000] {subprocess.py:93} INFO - 	at org.postgresql.Driver.makeConnection(Driver.java:446)
+[2026-03-16T18:33:35.674+0000] {subprocess.py:93} INFO - 	at org.postgresql.Driver.connect(Driver.java:298)
+[2026-03-16T18:33:35.675+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.connection.BasicConnectionProvider.getConnection(BasicConnectionProvider.scala:49)
+[2026-03-16T18:33:35.677+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.connection.ConnectionProviderBase.create(ConnectionProvider.scala:102)
+[2026-03-16T18:33:35.684+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.jdbc.JdbcDialect.$anonfun$createConnectionFactory$1(JdbcDialects.scala:161)
+[2026-03-16T18:33:35.685+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.jdbc.JdbcDialect.$anonfun$createConnectionFactory$1$adapted(JdbcDialects.scala:157)
+[2026-03-16T18:33:35.686+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JDBCRDD$.getQueryOutputSchema(JDBCRDD.scala:63)
+[2026-03-16T18:33:35.687+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JDBCRDD$.resolveTable(JDBCRDD.scala:58)
+[2026-03-16T18:33:35.703+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JDBCRelation$.getSchema(JDBCRelation.scala:241)
+[2026-03-16T18:33:35.704+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JdbcRelationProvider.createRelation(JdbcRelationProvider.scala:37)
+[2026-03-16T18:33:35.707+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.DataSource.resolveRelation(DataSource.scala:346)
+[2026-03-16T18:33:35.743+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.DataFrameReader.loadV1Source(DataFrameReader.scala:229)
+[2026-03-16T18:33:35.744+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.DataFrameReader.$anonfun$load$2(DataFrameReader.scala:211)
+[2026-03-16T18:33:35.745+0000] {subprocess.py:93} INFO - 	at scala.Option.getOrElse(Option.scala:189)
+[2026-03-16T18:33:35.745+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.DataFrameReader.load(DataFrameReader.scala:211)
+[2026-03-16T18:33:35.747+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.DataFrameReader.load(DataFrameReader.scala:172)
+[2026-03-16T18:33:35.759+0000] {subprocess.py:93} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[2026-03-16T18:33:35.761+0000] {subprocess.py:93} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+[2026-03-16T18:33:35.766+0000] {subprocess.py:93} INFO - 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[2026-03-16T18:33:35.767+0000] {subprocess.py:93} INFO - 	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+[2026-03-16T18:33:35.791+0000] {subprocess.py:93} INFO - 	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+[2026-03-16T18:33:35.883+0000] {subprocess.py:93} INFO - 	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+[2026-03-16T18:33:36.377+0000] {subprocess.py:93} INFO - 	at py4j.Gateway.invoke(Gateway.java:282)
+[2026-03-16T18:33:36.508+0000] {subprocess.py:93} INFO - 	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+[2026-03-16T18:33:36.730+0000] {subprocess.py:93} INFO - 	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+[2026-03-16T18:33:36.960+0000] {subprocess.py:93} INFO - 	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+[2026-03-16T18:33:37.050+0000] {job.py:221} ERROR - Job heartbeat failed with error. Scheduler is in unhealthy state
+[2026-03-16T18:33:37.308+0000] {subprocess.py:93} INFO - 	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+[2026-03-16T18:33:37.356+0000] {subprocess.py:93} INFO - 	at java.base/java.lang.Thread.run(Thread.java:840)
+[2026-03-16T18:33:37.358+0000] {subprocess.py:93} INFO - Caused by: java.net.UnknownHostException: postgres-postgis
+[2026-03-16T18:33:37.380+0000] {subprocess.py:93} INFO - 	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:572)
+[2026-03-16T18:33:37.381+0000] {subprocess.py:93} INFO - 	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+[2026-03-16T18:33:37.388+0000] {subprocess.py:93} INFO - 	at java.base/java.net.Socket.connect(Socket.java:633)
+[2026-03-16T18:33:37.392+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.PGStream.createSocket(PGStream.java:243)
+[2026-03-16T18:33:37.393+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.PGStream.<init>(PGStream.java:98)
+[2026-03-16T18:33:37.406+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:136)
+[2026-03-16T18:33:37.407+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:262)
+[2026-03-16T18:33:37.408+0000] {subprocess.py:93} INFO - 	... 30 more
+[2026-03-16T18:33:37.409+0000] {subprocess.py:93} INFO - 
+[2026-03-16T18:33:51.546+0000] {job.py:221} ERROR - Job heartbeat failed with error. Scheduler is in unhealthy state
+[2026-03-16T18:34:07.835+0000] {job.py:221} ERROR - Job heartbeat failed with error. Scheduler is in unhealthy state
+[2026-03-16T18:34:23.534+0000] {job.py:221} ERROR - Job heartbeat failed with error. Scheduler is in unhealthy state
+[2026-03-16T18:34:37.827+0000] {job.py:221} ERROR - Job heartbeat failed with error. Scheduler is in unhealthy state
+[2026-03-16T18:34:53.080+0000] {job.py:221} ERROR - Job heartbeat failed with error. Scheduler is in unhealthy state
+[2026-03-16T18:34:53.161+0000] {local_task_job_runner.py:211} ERROR - Heartbeat time limit exceeded!
+[2026-03-16T18:34:53.304+0000] {process_utils.py:131} INFO - Sending 15 to group 172. PIDs of all processes in the group: [177, 191, 172]
+[2026-03-16T18:34:53.346+0000] {process_utils.py:86} INFO - Sending the signal 15 to group 172
+[2026-03-16T18:34:53.449+0000] {taskinstance.py:2450} ERROR - Received SIGTERM. Terminating subprocesses.
+[2026-03-16T18:34:53.453+0000] {subprocess.py:104} INFO - Sending SIGTERM signal to process group
+[2026-03-16T18:34:56.517+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=191, status='terminated', started='18:25:34') (191) terminated with exit code None
+[2026-03-16T18:35:00.867+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 203, in execute
+    result = self.subprocess_hook.run_command(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/hooks/subprocess.py", line 91, in run_command
+    for raw_line in iter(self.sub_process.stdout.readline, b""):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 2452, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2026-03-16T18:35:01.616+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=pipeline_gps, task_id=task_process, execution_date=20260316T180500, start_date=20260316T182529, end_date=20260316T183501
+[2026-03-16T18:35:04.351+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 6 for task task_process (Task received SIGTERM signal; 172)
+[2026-03-16T18:35:04.666+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=177, status='terminated', started='18:25:31') (177) terminated with exit code None
+[2026-03-16T18:35:04.745+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=172, status='terminated', exitcode=1, started='18:25:28') (172) terminated with exit code 1

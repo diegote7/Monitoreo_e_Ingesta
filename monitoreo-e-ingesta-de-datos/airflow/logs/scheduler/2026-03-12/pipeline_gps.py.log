@@ -1,0 +1,865 @@
+[2026-03-12T05:22:15.714+0000] {processor.py:161} INFO - Started process (PID=24) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:22:15.735+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:22:15.775+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:22:15.739+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:22:16.173+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:22:21.845+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:22:21.840+0000] {override.py:1769} INFO - Created Permission View: can read on DAG:pipeline_gps
+[2026-03-12T05:22:22.028+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:22:22.016+0000] {override.py:1769} INFO - Created Permission View: can edit on DAG:pipeline_gps
+[2026-03-12T05:22:22.119+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:22:22.118+0000] {override.py:1769} INFO - Created Permission View: can delete on DAG:pipeline_gps
+[2026-03-12T05:22:22.121+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:22:22.121+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:22:22.291+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:22:22.290+0000] {dag.py:3058} INFO - Creating ORM DAG for pipeline_gps
+[2026-03-12T05:22:22.434+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:22:22.426+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:21:00+00:00, run_after=2026-03-12 05:22:00+00:00
+[2026-03-12T05:22:22.654+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 7.049 seconds
+[2026-03-12T05:22:54.031+0000] {processor.py:161} INFO - Started process (PID=25) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:22:54.094+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:22:54.243+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:22:54.189+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:22:56.093+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:22:56.753+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:22:56.752+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:22:57.074+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:22:57.073+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:21:00+00:00, run_after=2026-03-12 05:22:00+00:00
+[2026-03-12T05:22:57.266+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 3.406 seconds
+[2026-03-12T05:23:27.761+0000] {processor.py:161} INFO - Started process (PID=26) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:23:27.767+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:23:27.772+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:23:27.769+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:23:27.818+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:23:27.899+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:23:27.899+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:23:27.988+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:23:27.987+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:22:00+00:00, run_after=2026-03-12 05:23:00+00:00
+[2026-03-12T05:23:28.050+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.310 seconds
+[2026-03-12T05:23:58.459+0000] {processor.py:161} INFO - Started process (PID=27) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:23:58.466+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:23:58.470+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:23:58.468+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:23:58.522+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:23:58.652+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:23:58.651+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:23:58.759+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:23:58.758+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:22:00+00:00, run_after=2026-03-12 05:23:00+00:00
+[2026-03-12T05:23:58.855+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.420 seconds
+[2026-03-12T05:24:29.366+0000] {processor.py:161} INFO - Started process (PID=28) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:24:29.373+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:24:29.383+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:24:29.379+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:24:29.460+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:24:29.547+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:24:29.546+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:24:29.623+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:24:29.623+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:23:00+00:00, run_after=2026-03-12 05:24:00+00:00
+[2026-03-12T05:24:29.683+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.330 seconds
+[2026-03-12T05:25:00.132+0000] {processor.py:161} INFO - Started process (PID=36) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:25:00.135+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:25:00.139+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:25:00.137+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:25:00.185+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:25:00.266+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:25:00.266+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:25:00.334+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:25:00.334+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:24:00+00:00, run_after=2026-03-12 05:25:00+00:00
+[2026-03-12T05:25:00.387+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.269 seconds
+[2026-03-12T05:25:31.365+0000] {processor.py:161} INFO - Started process (PID=44) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:25:31.367+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:25:31.371+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:25:31.370+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:25:31.415+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:25:31.575+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:25:31.574+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:25:31.667+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:25:31.666+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:25:00+00:00, run_after=2026-03-12 05:26:00+00:00
+[2026-03-12T05:25:31.725+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.370 seconds
+[2026-03-12T05:26:15.822+0000] {processor.py:161} INFO - Started process (PID=52) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:26:15.826+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:26:15.828+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:26:15.827+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:26:15.880+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:26:15.960+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:26:15.959+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:26:16.021+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:26:16.020+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:26:00+00:00, run_after=2026-03-12 05:27:00+00:00
+[2026-03-12T05:26:16.072+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.260 seconds
+[2026-03-12T05:26:46.796+0000] {processor.py:161} INFO - Started process (PID=53) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:26:46.806+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:26:46.809+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:26:46.808+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:26:46.850+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:26:46.908+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:26:46.907+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:26:46.969+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:26:46.968+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:26:00+00:00, run_after=2026-03-12 05:27:00+00:00
+[2026-03-12T05:26:47.020+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.232 seconds
+[2026-03-12T05:27:17.165+0000] {processor.py:161} INFO - Started process (PID=61) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:27:17.170+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:27:17.172+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:27:17.172+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:27:17.206+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:27:17.279+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:27:17.279+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:27:17.345+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:27:17.345+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:27:00+00:00, run_after=2026-03-12 05:28:00+00:00
+[2026-03-12T05:27:17.402+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.245 seconds
+[2026-03-12T05:27:47.958+0000] {processor.py:161} INFO - Started process (PID=62) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:27:47.961+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:27:47.964+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:27:47.962+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:27:48.008+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:27:48.086+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:27:48.085+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:27:48.148+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:27:48.148+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:27:00+00:00, run_after=2026-03-12 05:28:00+00:00
+[2026-03-12T05:27:48.225+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.279 seconds
+[2026-03-12T05:28:18.944+0000] {processor.py:161} INFO - Started process (PID=70) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:28:18.947+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:28:18.950+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:28:18.949+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:28:18.984+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:28:19.065+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:28:19.064+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:28:19.136+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:28:19.135+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:28:00+00:00, run_after=2026-03-12 05:29:00+00:00
+[2026-03-12T05:28:19.188+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.253 seconds
+[2026-03-12T05:28:49.985+0000] {processor.py:161} INFO - Started process (PID=71) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:28:49.989+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:28:49.992+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:28:49.990+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:28:50.039+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:28:50.126+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:28:50.125+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:28:50.223+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:28:50.222+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:28:00+00:00, run_after=2026-03-12 05:29:00+00:00
+[2026-03-12T05:28:50.305+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.332 seconds
+[2026-03-12T05:29:20.701+0000] {processor.py:161} INFO - Started process (PID=79) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:29:20.706+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:29:20.709+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:29:20.708+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:29:20.742+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:29:20.807+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:29:20.806+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:29:20.870+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:29:20.869+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:29:00+00:00, run_after=2026-03-12 05:30:00+00:00
+[2026-03-12T05:29:20.922+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.229 seconds
+[2026-03-12T05:29:51.296+0000] {processor.py:161} INFO - Started process (PID=80) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:29:51.301+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:29:51.304+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:29:51.303+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:29:51.352+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:29:51.454+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:29:51.453+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:29:51.547+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:29:51.547+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:29:00+00:00, run_after=2026-03-12 05:30:00+00:00
+[2026-03-12T05:29:51.606+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.320 seconds
+[2026-03-12T05:30:22.170+0000] {processor.py:161} INFO - Started process (PID=88) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:30:22.176+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:30:22.180+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:30:22.178+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:30:22.233+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:30:21.959+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:30:21.958+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:30:22.048+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:30:22.047+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:30:00+00:00, run_after=2026-03-12 05:31:00+00:00
+[2026-03-12T05:30:22.149+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.364 seconds
+[2026-03-12T05:30:52.363+0000] {processor.py:161} INFO - Started process (PID=89) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:30:52.377+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:30:52.383+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:30:52.381+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:30:52.421+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:30:52.533+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:30:52.533+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:30:52.653+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:30:52.653+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:30:00+00:00, run_after=2026-03-12 05:31:00+00:00
+[2026-03-12T05:30:52.708+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.369 seconds
+[2026-03-12T05:31:23.556+0000] {processor.py:161} INFO - Started process (PID=97) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:31:23.562+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:31:23.566+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:31:23.566+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:31:23.610+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:31:23.712+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:31:23.711+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:31:23.858+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:31:23.857+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:31:00+00:00, run_after=2026-03-12 05:32:00+00:00
+[2026-03-12T05:31:23.929+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.384 seconds
+[2026-03-12T05:31:54.293+0000] {processor.py:161} INFO - Started process (PID=98) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:31:54.296+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:31:54.299+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:31:54.298+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:31:54.341+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:31:54.406+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:31:54.405+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:31:54.512+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:31:54.511+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:31:00+00:00, run_after=2026-03-12 05:32:00+00:00
+[2026-03-12T05:31:54.571+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.289 seconds
+[2026-03-12T05:32:25.109+0000] {processor.py:161} INFO - Started process (PID=106) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:32:25.112+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:32:25.115+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:32:25.114+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:32:25.149+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:32:25.220+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:32:25.219+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:32:25.306+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:32:25.305+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:32:00+00:00, run_after=2026-03-12 05:33:00+00:00
+[2026-03-12T05:32:25.368+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.271 seconds
+[2026-03-12T05:32:55.761+0000] {processor.py:161} INFO - Started process (PID=107) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:32:55.766+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:32:55.769+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:32:55.768+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:32:55.805+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:32:55.872+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:32:55.872+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:32:55.949+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:32:55.948+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:32:00+00:00, run_after=2026-03-12 05:33:00+00:00
+[2026-03-12T05:32:56.008+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.257 seconds
+[2026-03-12T05:33:26.990+0000] {processor.py:161} INFO - Started process (PID=115) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:33:26.995+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:33:27.002+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:33:26.999+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:33:27.051+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:33:27.144+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:33:27.144+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:33:27.257+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:33:27.255+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:33:00+00:00, run_after=2026-03-12 05:34:00+00:00
+[2026-03-12T05:33:27.320+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.342 seconds
+[2026-03-12T05:33:58.130+0000] {processor.py:161} INFO - Started process (PID=116) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:33:58.133+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:33:58.147+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:33:58.145+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:33:58.318+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:33:58.856+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:33:58.855+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:33:59.045+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:33:59.045+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:33:00+00:00, run_after=2026-03-12 05:34:00+00:00
+[2026-03-12T05:33:59.105+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 1.010 seconds
+[2026-03-12T05:34:29.824+0000] {processor.py:161} INFO - Started process (PID=124) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:34:29.828+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:34:29.831+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:34:29.831+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:34:29.876+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:34:29.944+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:34:29.943+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:34:30.004+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:34:30.003+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:34:00+00:00, run_after=2026-03-12 05:35:00+00:00
+[2026-03-12T05:34:30.057+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.242 seconds
+[2026-03-12T05:35:00.218+0000] {processor.py:161} INFO - Started process (PID=125) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:35:00.220+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:35:00.223+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:35:00.222+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:35:00.252+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:35:00.328+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:35:00.327+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:35:00.441+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:35:00.439+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:34:00+00:00, run_after=2026-03-12 05:35:00+00:00
+[2026-03-12T05:35:00.515+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.303 seconds
+[2026-03-12T05:35:31.305+0000] {processor.py:161} INFO - Started process (PID=133) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:35:31.312+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:35:31.314+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:35:31.313+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:35:31.349+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:35:31.418+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:35:31.417+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:35:31.476+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:35:31.476+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:35:00+00:00, run_after=2026-03-12 05:36:00+00:00
+[2026-03-12T05:35:31.526+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.228 seconds
+[2026-03-12T05:36:02.027+0000] {processor.py:161} INFO - Started process (PID=134) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:36:02.033+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:36:02.036+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:36:02.035+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:36:02.090+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:36:02.161+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:36:02.160+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:36:02.275+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:36:02.275+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:35:00+00:00, run_after=2026-03-12 05:36:00+00:00
+[2026-03-12T05:36:02.322+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.308 seconds
+[2026-03-12T05:36:33.543+0000] {processor.py:161} INFO - Started process (PID=142) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:36:33.560+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:36:33.563+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:36:33.562+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:36:33.687+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:36:33.883+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:36:33.882+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:36:33.989+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:36:33.988+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:36:00+00:00, run_after=2026-03-12 05:37:00+00:00
+[2026-03-12T05:36:34.083+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.575 seconds
+[2026-03-12T05:37:10.225+0000] {processor.py:161} INFO - Started process (PID=150) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:37:10.228+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:37:10.230+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:37:10.229+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:37:10.277+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:37:10.351+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:37:10.350+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:37:10.415+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:37:10.415+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:37:00+00:00, run_after=2026-03-12 05:38:00+00:00
+[2026-03-12T05:37:10.471+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.255 seconds
+[2026-03-12T05:37:41.065+0000] {processor.py:161} INFO - Started process (PID=151) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:37:41.071+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:37:41.073+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:37:41.072+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:37:41.105+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:37:41.202+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:37:41.201+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:37:41.396+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:37:41.395+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:37:00+00:00, run_after=2026-03-12 05:38:00+00:00
+[2026-03-12T05:37:41.498+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.443 seconds
+[2026-03-12T05:38:12.436+0000] {processor.py:161} INFO - Started process (PID=159) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:38:12.441+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:38:12.444+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:38:12.443+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:38:12.495+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:38:12.592+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:38:12.592+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:38:12.904+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:38:12.903+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:38:00+00:00, run_after=2026-03-12 05:39:00+00:00
+[2026-03-12T05:38:13.078+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.659 seconds
+[2026-03-12T05:38:44.120+0000] {processor.py:161} INFO - Started process (PID=160) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:38:44.131+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:38:44.156+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:38:44.139+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:38:44.347+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:38:44.668+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:38:44.668+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:38:44.787+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:38:44.786+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:38:00+00:00, run_after=2026-03-12 05:39:00+00:00
+[2026-03-12T05:38:44.864+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.794 seconds
+[2026-03-12T05:39:24.943+0000] {processor.py:161} INFO - Started process (PID=168) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:39:24.949+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:39:24.955+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:39:24.951+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:39:25.054+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:39:25.170+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:39:25.167+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:39:25.551+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:39:25.535+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:39:00+00:00, run_after=2026-03-12 05:40:00+00:00
+[2026-03-12T05:39:25.756+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.825 seconds
+[2026-03-12T05:39:56.185+0000] {processor.py:161} INFO - Started process (PID=169) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:39:56.190+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:39:56.195+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:39:56.193+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:39:56.285+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:39:56.429+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:39:56.428+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:39:56.637+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:39:56.637+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:39:00+00:00, run_after=2026-03-12 05:40:00+00:00
+[2026-03-12T05:39:56.735+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.561 seconds
+[2026-03-12T05:40:36.618+0000] {processor.py:161} INFO - Started process (PID=177) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:40:36.623+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:40:36.645+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:40:36.632+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:40:36.764+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:40:37.096+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:40:37.082+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:40:37.419+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:40:37.418+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:40:00+00:00, run_after=2026-03-12 05:41:00+00:00
+[2026-03-12T05:40:37.627+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 1.027 seconds
+[2026-03-12T05:41:15.206+0000] {processor.py:161} INFO - Started process (PID=185) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:41:15.213+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:41:15.225+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:41:15.223+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:41:15.286+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:41:15.391+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:41:15.391+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:41:15.467+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:41:15.466+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:41:00+00:00, run_after=2026-03-12 05:42:00+00:00
+[2026-03-12T05:41:15.519+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.328 seconds
+[2026-03-12T05:41:46.456+0000] {processor.py:161} INFO - Started process (PID=186) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:41:46.459+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:41:46.475+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:41:46.461+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:41:46.602+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:41:46.739+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:41:46.738+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:41:46.857+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:41:46.856+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:41:00+00:00, run_after=2026-03-12 05:42:00+00:00
+[2026-03-12T05:41:46.902+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.461 seconds
+[2026-03-12T05:42:17.078+0000] {processor.py:161} INFO - Started process (PID=194) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:42:17.082+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:42:17.086+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:42:17.085+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:42:17.183+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:42:17.382+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:42:17.380+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:42:17.614+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:42:17.613+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:42:00+00:00, run_after=2026-03-12 05:43:00+00:00
+[2026-03-12T05:42:17.732+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.665 seconds
+[2026-03-12T05:42:47.952+0000] {processor.py:161} INFO - Started process (PID=195) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:42:47.958+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:42:47.998+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:42:47.960+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:42:48.240+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:42:48.488+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:42:48.487+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:42:48.752+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:42:48.752+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:42:00+00:00, run_after=2026-03-12 05:43:00+00:00
+[2026-03-12T05:42:48.835+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.916 seconds
+[2026-03-12T05:43:19.318+0000] {processor.py:161} INFO - Started process (PID=203) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:43:19.324+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:43:19.329+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:43:19.326+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:43:19.413+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:43:19.584+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:43:19.584+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:43:19.662+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:43:19.662+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:43:00+00:00, run_after=2026-03-12 05:44:00+00:00
+[2026-03-12T05:43:19.798+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.500 seconds
+[2026-03-12T05:43:50.069+0000] {processor.py:161} INFO - Started process (PID=204) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:43:50.076+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:43:50.079+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:43:50.078+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:43:50.137+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:43:50.228+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:43:50.228+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:43:50.326+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:43:50.325+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:43:00+00:00, run_after=2026-03-12 05:44:00+00:00
+[2026-03-12T05:43:50.396+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.340 seconds
+[2026-03-12T05:44:21.704+0000] {processor.py:161} INFO - Started process (PID=212) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:44:21.729+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:44:21.733+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:44:21.732+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:44:21.941+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:44:22.648+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:44:22.648+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:44:23.055+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:44:23.041+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:44:00+00:00, run_after=2026-03-12 05:45:00+00:00
+[2026-03-12T05:44:23.242+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 1.560 seconds
+[2026-03-12T05:44:54.343+0000] {processor.py:161} INFO - Started process (PID=213) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:44:54.346+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:44:54.351+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:44:54.348+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:44:54.400+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:44:54.501+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:44:54.499+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:44:54.572+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:44:54.571+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:44:00+00:00, run_after=2026-03-12 05:45:00+00:00
+[2026-03-12T05:44:54.643+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.311 seconds
+[2026-03-12T05:45:24.797+0000] {processor.py:161} INFO - Started process (PID=221) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:45:24.801+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:45:24.804+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:45:24.803+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:45:24.895+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:45:25.019+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:45:25.018+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:45:25.128+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:45:25.127+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:45:00+00:00, run_after=2026-03-12 05:46:00+00:00
+[2026-03-12T05:45:25.203+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.414 seconds
+[2026-03-12T05:45:56.254+0000] {processor.py:161} INFO - Started process (PID=222) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:45:56.257+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:45:56.261+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:45:56.259+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:45:56.320+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:45:56.430+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:45:56.430+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:45:56.504+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:45:56.504+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:45:00+00:00, run_after=2026-03-12 05:46:00+00:00
+[2026-03-12T05:45:56.552+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.308 seconds
+[2026-03-12T05:46:27.279+0000] {processor.py:161} INFO - Started process (PID=230) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:46:27.284+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:46:27.289+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:46:27.286+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:46:27.402+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:46:27.542+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:46:27.542+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:46:27.682+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:46:27.681+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:46:00+00:00, run_after=2026-03-12 05:47:00+00:00
+[2026-03-12T05:46:27.802+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.539 seconds
+[2026-03-12T05:46:59.068+0000] {processor.py:161} INFO - Started process (PID=231) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:46:59.084+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:46:59.096+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:46:59.086+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:46:59.296+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:46:59.412+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:46:59.411+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:46:59.518+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:46:59.517+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:46:00+00:00, run_after=2026-03-12 05:47:00+00:00
+[2026-03-12T05:46:59.593+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.560 seconds
+[2026-03-12T05:47:29.862+0000] {processor.py:161} INFO - Started process (PID=239) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:47:29.865+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:47:29.867+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:47:29.866+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:47:29.898+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:47:29.970+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:47:29.970+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:47:30.029+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:47:30.028+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:47:00+00:00, run_after=2026-03-12 05:48:00+00:00
+[2026-03-12T05:47:30.075+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.221 seconds
+[2026-03-12T05:48:00.932+0000] {processor.py:161} INFO - Started process (PID=240) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:48:00.964+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:48:00.967+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:48:00.966+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:48:01.019+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:48:01.102+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:48:01.102+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:48:01.174+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:48:01.173+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:47:00+00:00, run_after=2026-03-12 05:48:00+00:00
+[2026-03-12T05:48:01.228+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.305 seconds
+[2026-03-12T05:48:31.751+0000] {processor.py:161} INFO - Started process (PID=248) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:48:31.757+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:48:31.760+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:48:31.759+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:48:31.802+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:48:31.885+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:48:31.884+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:48:31.984+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:48:31.984+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:48:00+00:00, run_after=2026-03-12 05:49:00+00:00
+[2026-03-12T05:48:32.059+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.318 seconds
+[2026-03-12T05:49:12.313+0000] {processor.py:161} INFO - Started process (PID=256) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:49:12.316+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:49:12.319+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:49:12.318+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:49:12.363+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:49:12.450+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:49:12.449+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:49:12.535+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:49:12.534+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:49:00+00:00, run_after=2026-03-12 05:50:00+00:00
+[2026-03-12T05:49:12.596+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.293 seconds
+[2026-03-12T05:49:43.133+0000] {processor.py:161} INFO - Started process (PID=257) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:49:43.135+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:49:43.138+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:49:43.137+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:49:43.170+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:49:43.218+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:49:43.218+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:49:43.275+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:49:43.275+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:49:00+00:00, run_after=2026-03-12 05:50:00+00:00
+[2026-03-12T05:49:43.323+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.199 seconds
+[2026-03-12T05:50:15.457+0000] {processor.py:161} INFO - Started process (PID=265) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:50:15.461+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:50:15.463+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:50:15.462+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:50:15.496+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:50:15.622+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:50:15.621+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:50:15.715+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:50:15.715+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:50:00+00:00, run_after=2026-03-12 05:51:00+00:00
+[2026-03-12T05:50:15.777+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.328 seconds
+[2026-03-12T05:50:46.654+0000] {processor.py:161} INFO - Started process (PID=266) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:50:46.657+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:50:46.659+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:50:46.659+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:50:46.697+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:50:46.752+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:50:46.752+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:50:46.811+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:50:46.811+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:50:00+00:00, run_after=2026-03-12 05:51:00+00:00
+[2026-03-12T05:50:46.863+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.220 seconds
+[2026-03-12T05:51:18.771+0000] {processor.py:161} INFO - Started process (PID=274) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:51:18.917+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:51:18.920+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:51:18.918+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:51:16.601+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:51:16.742+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:51:16.742+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:51:16.869+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:51:16.869+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:51:00+00:00, run_after=2026-03-12 05:52:00+00:00
+[2026-03-12T05:51:16.919+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.540 seconds
+[2026-03-12T05:51:47.021+0000] {processor.py:161} INFO - Started process (PID=275) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:51:47.026+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:51:47.029+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:51:47.028+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:51:47.075+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:51:47.162+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:51:47.161+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:51:47.229+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:51:47.229+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:51:00+00:00, run_after=2026-03-12 05:52:00+00:00
+[2026-03-12T05:51:47.310+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.299 seconds
+[2026-03-12T05:52:17.555+0000] {processor.py:161} INFO - Started process (PID=283) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:52:17.564+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:52:17.568+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:52:17.566+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:52:17.614+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:52:17.749+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:52:17.748+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:52:17.840+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:52:17.840+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:52:00+00:00, run_after=2026-03-12 05:53:00+00:00
+[2026-03-12T05:52:17.928+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.385 seconds
+[2026-03-12T05:52:48.149+0000] {processor.py:161} INFO - Started process (PID=284) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:52:48.162+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:52:48.165+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:52:48.164+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:52:48.215+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:52:48.308+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:52:48.307+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:52:48.408+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:52:48.406+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:52:00+00:00, run_after=2026-03-12 05:53:00+00:00
+[2026-03-12T05:52:48.539+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.401 seconds
+[2026-03-12T05:53:19.648+0000] {processor.py:161} INFO - Started process (PID=292) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:53:19.654+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:53:19.656+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:53:19.655+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:53:19.687+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:53:19.758+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:53:19.758+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:53:19.837+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:53:19.837+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:53:00+00:00, run_after=2026-03-12 05:54:00+00:00
+[2026-03-12T05:53:19.894+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.254 seconds
+[2026-03-12T05:53:50.641+0000] {processor.py:161} INFO - Started process (PID=293) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:53:50.645+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:53:50.651+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:53:50.648+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:53:50.733+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:53:50.837+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:53:50.837+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:53:50.960+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:53:50.959+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:53:00+00:00, run_after=2026-03-12 05:54:00+00:00
+[2026-03-12T05:53:51.167+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.535 seconds
+[2026-03-12T05:54:27.139+0000] {processor.py:161} INFO - Started process (PID=301) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:54:27.163+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:54:27.173+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:54:27.165+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:54:27.279+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:54:27.447+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:54:27.446+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:54:27.535+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:54:27.535+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:54:00+00:00, run_after=2026-03-12 05:55:00+00:00
+[2026-03-12T05:54:27.633+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.504 seconds
+[2026-03-12T05:54:58.189+0000] {processor.py:161} INFO - Started process (PID=302) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:54:58.199+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:54:58.202+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:54:58.201+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:54:58.294+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:54:58.408+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:54:58.407+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:54:58.562+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:54:58.561+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:54:00+00:00, run_after=2026-03-12 05:55:00+00:00
+[2026-03-12T05:54:58.625+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.451 seconds
+[2026-03-12T05:55:29.385+0000] {processor.py:161} INFO - Started process (PID=310) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:55:29.389+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:55:29.395+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:55:29.391+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:55:29.493+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:55:29.684+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:55:29.677+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:55:29.820+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:55:29.819+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:55:00+00:00, run_after=2026-03-12 05:56:00+00:00
+[2026-03-12T05:55:29.897+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.521 seconds
+[2026-03-12T05:56:00.182+0000] {processor.py:161} INFO - Started process (PID=311) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:56:00.185+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:56:00.200+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:56:00.187+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:56:00.283+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:56:00.373+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:56:00.373+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:56:00.455+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:56:00.455+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:55:00+00:00, run_after=2026-03-12 05:56:00+00:00
+[2026-03-12T05:56:00.506+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.335 seconds
+[2026-03-12T05:56:31.239+0000] {processor.py:161} INFO - Started process (PID=319) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:56:31.246+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:56:31.259+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:56:31.248+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:56:31.365+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:56:31.508+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:56:31.508+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:56:31.665+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:56:31.664+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:56:00+00:00, run_after=2026-03-12 05:57:00+00:00
+[2026-03-12T05:56:31.790+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.572 seconds
+[2026-03-12T05:57:16.191+0000] {processor.py:161} INFO - Started process (PID=327) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:57:16.197+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:57:16.203+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:57:16.199+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:57:16.313+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:57:16.489+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:57:16.489+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:57:16.638+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:57:16.637+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:57:00+00:00, run_after=2026-03-12 05:58:00+00:00
+[2026-03-12T05:57:16.719+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.544 seconds
+[2026-03-12T05:57:47.177+0000] {processor.py:161} INFO - Started process (PID=328) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:57:47.182+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:57:47.194+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:57:47.183+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:57:47.268+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:57:47.357+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:57:47.356+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:57:47.461+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:57:47.460+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:57:00+00:00, run_after=2026-03-12 05:58:00+00:00
+[2026-03-12T05:57:47.568+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.401 seconds
+[2026-03-12T05:58:17.754+0000] {processor.py:161} INFO - Started process (PID=336) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:58:17.766+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:58:17.772+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:58:17.768+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:58:17.928+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:58:18.215+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:58:18.201+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:58:18.372+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:58:18.371+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:58:00+00:00, run_after=2026-03-12 05:59:00+00:00
+[2026-03-12T05:58:18.515+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.784 seconds
+[2026-03-12T05:58:48.665+0000] {processor.py:161} INFO - Started process (PID=337) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:58:48.670+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:58:48.679+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:58:48.672+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:58:48.753+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:58:48.835+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:58:48.834+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:58:48.910+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:58:48.909+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:58:00+00:00, run_after=2026-03-12 05:59:00+00:00
+[2026-03-12T05:58:48.962+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.307 seconds
+[2026-03-12T05:59:20.277+0000] {processor.py:161} INFO - Started process (PID=345) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:59:20.293+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:59:20.300+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:59:20.295+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:59:20.395+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:59:20.526+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:59:20.525+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:59:20.654+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:59:20.653+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:59:00+00:00, run_after=2026-03-12 06:00:00+00:00
+[2026-03-12T05:59:20.749+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.494 seconds
+[2026-03-12T05:59:51.133+0000] {processor.py:161} INFO - Started process (PID=346) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:59:51.136+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T05:59:51.146+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:59:51.138+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:59:51.247+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T05:59:51.357+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:59:51.357+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T05:59:51.444+0000] {logging_mixin.py:188} INFO - [2026-03-12T05:59:51.443+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 05:59:00+00:00, run_after=2026-03-12 06:00:00+00:00
+[2026-03-12T05:59:51.504+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.382 seconds
+[2026-03-12T06:00:22.256+0000] {processor.py:161} INFO - Started process (PID=354) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:00:22.265+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T06:00:22.272+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:00:22.268+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:00:22.459+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:00:22.771+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:00:22.770+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T06:00:22.930+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:00:22.930+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 06:00:00+00:00, run_after=2026-03-12 06:01:00+00:00
+[2026-03-12T06:00:23.008+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.775 seconds
+[2026-03-12T06:00:53.549+0000] {processor.py:161} INFO - Started process (PID=355) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:00:53.552+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T06:00:53.559+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:00:53.554+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:00:53.655+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:00:53.751+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:00:53.750+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T06:00:53.853+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:00:53.852+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 06:00:00+00:00, run_after=2026-03-12 06:01:00+00:00
+[2026-03-12T06:00:53.915+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.377 seconds
+[2026-03-12T06:01:24.399+0000] {processor.py:161} INFO - Started process (PID=363) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:01:24.404+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T06:01:24.409+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:01:24.405+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:01:24.505+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:01:24.596+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:01:24.595+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T06:01:24.665+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:01:24.665+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 06:01:00+00:00, run_after=2026-03-12 06:02:00+00:00
+[2026-03-12T06:01:24.721+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.331 seconds
+[2026-03-12T06:01:54.956+0000] {processor.py:161} INFO - Started process (PID=364) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:01:54.961+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T06:01:54.965+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:01:54.963+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:01:55.114+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:01:55.257+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:01:55.257+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T06:01:55.407+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:01:55.407+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 06:01:00+00:00, run_after=2026-03-12 06:02:00+00:00
+[2026-03-12T06:01:55.497+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.563 seconds
+[2026-03-12T06:02:26.081+0000] {processor.py:161} INFO - Started process (PID=372) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:02:26.087+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T06:02:26.098+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:02:26.089+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:02:26.208+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:02:26.328+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:02:26.327+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T06:02:26.488+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:02:26.488+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 06:02:00+00:00, run_after=2026-03-12 06:03:00+00:00
+[2026-03-12T06:02:26.553+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.485 seconds
+[2026-03-12T06:02:56.772+0000] {processor.py:161} INFO - Started process (PID=373) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:02:56.777+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T06:02:56.784+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:02:56.779+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:02:56.863+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:02:56.994+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:02:56.993+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T06:02:57.066+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:02:57.065+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 06:02:00+00:00, run_after=2026-03-12 06:03:00+00:00
+[2026-03-12T06:02:57.116+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.354 seconds
+[2026-03-12T06:03:27.444+0000] {processor.py:161} INFO - Started process (PID=381) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:03:27.449+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T06:03:27.453+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:03:27.451+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:03:27.580+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:03:27.854+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:03:27.842+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T06:03:27.949+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:03:27.949+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 06:03:00+00:00, run_after=2026-03-12 06:04:00+00:00
+[2026-03-12T06:03:28.021+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.589 seconds
+[2026-03-12T06:03:58.301+0000] {processor.py:161} INFO - Started process (PID=382) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:03:58.305+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T06:03:58.312+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:03:58.307+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:03:58.375+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:03:58.489+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:03:58.489+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T06:03:58.577+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:03:58.576+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 06:03:00+00:00, run_after=2026-03-12 06:04:00+00:00
+[2026-03-12T06:03:58.641+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.352 seconds
+[2026-03-12T06:04:28.937+0000] {processor.py:161} INFO - Started process (PID=390) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:04:28.947+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T06:04:28.960+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:04:28.949+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:04:29.057+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:04:29.158+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:04:29.157+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T06:04:29.232+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:04:29.231+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 06:04:00+00:00, run_after=2026-03-12 06:05:00+00:00
+[2026-03-12T06:04:29.289+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.365 seconds
+[2026-03-12T06:04:59.933+0000] {processor.py:161} INFO - Started process (PID=391) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:04:59.937+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T06:04:59.951+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:04:59.940+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:05:00.040+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:05:00.124+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:05:00.123+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T06:04:57.795+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:04:57.795+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 06:04:00+00:00, run_after=2026-03-12 06:05:00+00:00
+[2026-03-12T06:04:57.873+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.377 seconds
+[2026-03-12T06:05:28.670+0000] {processor.py:161} INFO - Started process (PID=399) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:05:28.675+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T06:05:28.684+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:05:28.677+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:05:28.800+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:05:28.901+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:05:28.900+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T06:05:28.998+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:05:28.996+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 06:05:00+00:00, run_after=2026-03-12 06:06:00+00:00
+[2026-03-12T06:05:29.058+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.399 seconds
+[2026-03-12T06:05:59.517+0000] {processor.py:161} INFO - Started process (PID=400) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:05:59.521+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T06:05:59.535+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:05:59.523+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:05:59.604+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:05:59.685+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:05:59.684+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T06:05:59.771+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:05:59.770+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 06:05:00+00:00, run_after=2026-03-12 06:06:00+00:00
+[2026-03-12T06:05:59.836+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.326 seconds
+[2026-03-12T06:06:30.397+0000] {processor.py:161} INFO - Started process (PID=408) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:06:30.401+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T06:06:30.404+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:06:30.403+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:06:30.458+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:06:30.559+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:06:30.559+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T06:06:30.635+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:06:30.634+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 06:06:00+00:00, run_after=2026-03-12 06:07:00+00:00
+[2026-03-12T06:06:30.690+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.302 seconds
+[2026-03-12T06:07:01.114+0000] {processor.py:161} INFO - Started process (PID=409) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:07:01.117+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T06:07:01.125+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:07:01.118+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:07:01.185+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:07:01.561+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:07:01.561+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T06:07:01.640+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:07:01.640+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 06:06:00+00:00, run_after=2026-03-12 06:07:00+00:00
+[2026-03-12T06:07:01.691+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.587 seconds
+[2026-03-12T06:07:32.223+0000] {processor.py:161} INFO - Started process (PID=417) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:07:32.227+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T06:07:32.233+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:07:32.229+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:07:32.300+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:07:32.398+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:07:32.397+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T06:07:32.472+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:07:32.471+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 06:07:00+00:00, run_after=2026-03-12 06:08:00+00:00
+[2026-03-12T06:07:32.535+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.319 seconds
+[2026-03-12T06:08:14.563+0000] {processor.py:161} INFO - Started process (PID=425) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:08:14.567+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T06:08:14.571+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:08:14.569+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:08:14.634+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:08:14.731+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:08:14.730+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T06:08:14.812+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:08:14.812+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 06:08:00+00:00, run_after=2026-03-12 06:09:00+00:00
+[2026-03-12T06:08:14.919+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.366 seconds
+[2026-03-12T06:08:45.782+0000] {processor.py:161} INFO - Started process (PID=426) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:08:45.787+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T06:08:45.811+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:08:45.800+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:08:45.892+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:08:45.992+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:08:45.991+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T06:08:46.133+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:08:46.125+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 06:08:00+00:00, run_after=2026-03-12 06:09:00+00:00
+[2026-03-12T06:08:46.252+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.489 seconds
+[2026-03-12T06:09:22.061+0000] {processor.py:161} INFO - Started process (PID=434) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:09:22.072+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T06:09:22.080+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:09:22.074+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:09:22.213+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:09:22.477+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:09:22.476+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T06:09:22.700+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:09:22.699+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 06:09:00+00:00, run_after=2026-03-12 06:10:00+00:00
+[2026-03-12T06:09:22.978+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.932 seconds
+[2026-03-12T06:09:54.041+0000] {processor.py:161} INFO - Started process (PID=435) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:09:54.047+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T06:09:54.058+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:09:54.048+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:09:54.174+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:09:54.328+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:09:54.316+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T06:09:54.536+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:09:54.534+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 06:09:00+00:00, run_after=2026-03-12 06:10:00+00:00
+[2026-03-12T06:09:54.725+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.695 seconds
+[2026-03-12T06:10:25.006+0000] {processor.py:161} INFO - Started process (PID=443) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:10:25.013+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T06:10:25.025+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:10:25.015+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:10:25.194+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:10:25.295+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:10:25.294+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T06:10:25.374+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:10:25.373+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 06:10:00+00:00, run_after=2026-03-12 06:11:00+00:00
+[2026-03-12T06:10:25.432+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.443 seconds
+[2026-03-12T06:10:55.596+0000] {processor.py:161} INFO - Started process (PID=444) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:10:55.600+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T06:10:55.610+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:10:55.602+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:10:55.693+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:10:55.786+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:10:55.785+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T06:10:55.532+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:10:55.532+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 06:10:00+00:00, run_after=2026-03-12 06:11:00+00:00
+[2026-03-12T06:10:55.599+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.367 seconds
+[2026-03-12T06:11:25.956+0000] {processor.py:161} INFO - Started process (PID=452) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:11:25.961+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T06:11:25.966+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:11:25.963+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:11:26.048+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:11:26.139+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:11:26.138+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T06:11:26.221+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:11:26.221+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 06:11:00+00:00, run_after=2026-03-12 06:12:00+00:00
+[2026-03-12T06:11:26.275+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.330 seconds
+[2026-03-12T06:11:57.159+0000] {processor.py:161} INFO - Started process (PID=453) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:11:57.162+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T06:11:57.169+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:11:57.164+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:11:57.242+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:11:57.324+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:11:57.323+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T06:11:57.399+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:11:57.398+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 06:11:00+00:00, run_after=2026-03-12 06:12:00+00:00
+[2026-03-12T06:11:57.451+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.304 seconds
+[2026-03-12T06:12:28.442+0000] {processor.py:161} INFO - Started process (PID=461) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:12:28.447+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T06:12:28.458+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:12:28.449+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:12:28.523+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:12:28.734+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:12:28.733+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T06:12:28.879+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:12:28.878+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 06:12:00+00:00, run_after=2026-03-12 06:13:00+00:00
+[2026-03-12T06:12:28.956+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.522 seconds
+[2026-03-12T06:13:00.240+0000] {processor.py:161} INFO - Started process (PID=462) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:13:00.255+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T06:13:00.270+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:13:00.258+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:13:01.103+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:13:01.466+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:13:01.465+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T06:13:02.180+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:13:02.180+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 06:12:00+00:00, run_after=2026-03-12 06:13:00+00:00
+[2026-03-12T06:13:02.318+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 2.122 seconds
+[2026-03-12T06:13:32.877+0000] {processor.py:161} INFO - Started process (PID=470) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:13:32.884+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T06:13:32.886+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:13:32.885+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:13:32.975+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:13:33.092+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:13:33.092+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T06:13:33.182+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:13:33.182+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 06:13:00+00:00, run_after=2026-03-12 06:14:00+00:00
+[2026-03-12T06:13:33.279+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.410 seconds
+[2026-03-12T06:14:13.095+0000] {processor.py:161} INFO - Started process (PID=478) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:14:13.098+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T06:14:13.100+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:14:13.099+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:14:13.138+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:14:13.210+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:14:13.209+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T06:14:13.281+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:14:13.281+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 06:14:00+00:00, run_after=2026-03-12 06:15:00+00:00
+[2026-03-12T06:14:13.338+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.250 seconds
+[2026-03-12T06:14:44.070+0000] {processor.py:161} INFO - Started process (PID=479) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:14:44.073+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T06:14:44.075+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:14:44.074+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:14:44.114+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:14:44.181+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:14:44.180+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T06:14:44.252+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:14:44.251+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 06:14:00+00:00, run_after=2026-03-12 06:15:00+00:00
+[2026-03-12T06:14:44.301+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.240 seconds
+[2026-03-12T06:15:14.921+0000] {processor.py:161} INFO - Started process (PID=487) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:15:14.926+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T06:15:14.929+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:15:14.928+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:15:14.968+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:15:15.048+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:15:15.048+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T06:15:15.124+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:15:15.124+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 06:15:00+00:00, run_after=2026-03-12 06:16:00+00:00
+[2026-03-12T06:15:15.179+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.268 seconds
+[2026-03-12T06:15:45.357+0000] {processor.py:161} INFO - Started process (PID=488) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:15:45.359+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T06:15:45.362+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:15:45.361+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:15:45.396+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:15:45.451+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:15:45.451+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T06:15:45.511+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:15:45.510+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 06:15:00+00:00, run_after=2026-03-12 06:16:00+00:00
+[2026-03-12T06:15:45.567+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.218 seconds
+[2026-03-12T06:16:16.439+0000] {processor.py:161} INFO - Started process (PID=496) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:16:16.445+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T06:16:16.448+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:16:16.447+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:16:16.487+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:16:16.573+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:16:16.572+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T06:16:16.657+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:16:16.657+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 06:16:00+00:00, run_after=2026-03-12 06:17:00+00:00
+[2026-03-12T06:16:16.716+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.286 seconds
+[2026-03-12T06:16:47.382+0000] {processor.py:161} INFO - Started process (PID=497) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:16:47.387+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T06:16:47.389+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:16:47.388+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:16:47.426+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:16:47.502+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:16:47.501+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T06:16:47.586+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:16:47.586+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 06:16:00+00:00, run_after=2026-03-12 06:17:00+00:00
+[2026-03-12T06:16:47.640+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.267 seconds
+[2026-03-12T06:17:18.584+0000] {processor.py:161} INFO - Started process (PID=505) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:17:18.589+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T06:17:18.593+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:17:18.592+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:17:18.745+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:17:18.885+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:17:18.884+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T06:17:19.347+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:17:19.346+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 06:17:00+00:00, run_after=2026-03-12 06:18:00+00:00
+[2026-03-12T06:17:19.557+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.993 seconds
+[2026-03-12T06:17:50.588+0000] {processor.py:161} INFO - Started process (PID=506) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:17:50.592+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T06:17:50.595+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:17:50.594+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:17:50.628+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:17:50.691+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:17:50.690+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T06:17:50.749+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:17:50.749+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 06:17:00+00:00, run_after=2026-03-12 06:18:00+00:00
+[2026-03-12T06:17:50.797+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.216 seconds
+[2026-03-12T06:18:21.401+0000] {processor.py:161} INFO - Started process (PID=514) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:18:21.406+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T06:18:21.410+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:18:21.407+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:18:21.495+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:18:21.599+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:18:21.599+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T06:18:21.754+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:18:21.753+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 06:18:00+00:00, run_after=2026-03-12 06:19:00+00:00
+[2026-03-12T06:18:21.848+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.463 seconds
+[2026-03-12T06:18:52.289+0000] {processor.py:161} INFO - Started process (PID=515) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:18:52.292+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T06:18:52.295+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:18:52.293+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:18:52.333+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:18:52.401+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:18:52.401+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T06:18:52.459+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:18:52.459+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 06:18:00+00:00, run_after=2026-03-12 06:19:00+00:00
+[2026-03-12T06:18:52.512+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.232 seconds
+[2026-03-12T06:19:23.351+0000] {processor.py:161} INFO - Started process (PID=523) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:19:23.356+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T06:19:23.360+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:19:23.358+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:19:23.724+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:19:24.109+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:19:24.095+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T06:19:24.418+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:19:24.405+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 06:19:00+00:00, run_after=2026-03-12 06:20:00+00:00
+[2026-03-12T06:19:24.636+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 1.304 seconds
+[2026-03-12T06:19:55.118+0000] {processor.py:161} INFO - Started process (PID=524) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:19:55.122+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T06:19:55.133+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:19:55.125+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:19:55.202+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:19:55.349+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:19:55.348+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T06:19:55.479+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:19:55.475+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 06:19:00+00:00, run_after=2026-03-12 06:20:00+00:00
+[2026-03-12T06:19:55.570+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.484 seconds
+[2026-03-12T06:20:38.891+0000] {processor.py:161} INFO - Started process (PID=532) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:20:38.898+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T06:20:38.910+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:20:38.902+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:20:39.118+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:20:41.002+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:20:41.001+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T06:20:41.327+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:20:41.326+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 06:20:00+00:00, run_after=2026-03-12 06:21:00+00:00
+[2026-03-12T06:20:41.561+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 1.074 seconds
+[2026-03-12T06:21:21.998+0000] {processor.py:161} INFO - Started process (PID=540) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:21:22.007+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T06:21:22.018+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:21:22.010+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:21:22.154+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:21:22.255+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:21:22.254+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T06:21:22.396+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:21:22.396+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 06:21:00+00:00, run_after=2026-03-12 06:22:00+00:00
+[2026-03-12T06:21:22.465+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.485 seconds
+[2026-03-12T06:21:52.648+0000] {processor.py:161} INFO - Started process (PID=541) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:21:52.652+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T06:21:52.661+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:21:52.654+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:21:52.746+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:21:52.847+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:21:52.846+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T06:21:52.955+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:21:52.954+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 06:21:00+00:00, run_after=2026-03-12 06:22:00+00:00
+[2026-03-12T06:21:53.033+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.394 seconds
+[2026-03-12T06:22:23.617+0000] {processor.py:161} INFO - Started process (PID=549) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:22:23.621+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T06:22:23.628+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:22:23.622+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:22:23.719+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:22:23.807+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:22:23.807+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T06:22:23.878+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:22:23.878+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 06:22:00+00:00, run_after=2026-03-12 06:23:00+00:00
+[2026-03-12T06:22:23.930+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.326 seconds
+[2026-03-12T06:22:54.904+0000] {processor.py:161} INFO - Started process (PID=550) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:22:54.909+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T06:22:54.917+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:22:54.910+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:22:54.984+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:22:55.060+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:22:55.060+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T06:22:55.143+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:22:55.143+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 06:22:00+00:00, run_after=2026-03-12 06:23:00+00:00
+[2026-03-12T06:22:55.200+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.303 seconds
+[2026-03-12T06:23:25.887+0000] {processor.py:161} INFO - Started process (PID=558) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:23:25.892+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T06:23:25.918+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:23:25.902+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:23:26.031+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:23:26.144+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:23:26.143+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T06:23:26.306+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:23:26.306+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 06:23:00+00:00, run_after=2026-03-12 06:24:00+00:00
+[2026-03-12T06:23:26.389+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.513 seconds
+[2026-03-12T06:23:57.188+0000] {processor.py:161} INFO - Started process (PID=559) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:23:57.196+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T06:23:57.229+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:23:57.198+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:23:57.440+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:23:57.826+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:23:57.823+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T06:23:58.319+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:23:58.317+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 06:23:00+00:00, run_after=2026-03-12 06:24:00+00:00
+[2026-03-12T06:23:58.416+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 1.250 seconds
+[2026-03-12T06:24:32.538+0000] {processor.py:161} INFO - Started process (PID=567) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:24:32.544+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T06:24:32.561+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:24:32.551+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:24:32.786+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:24:33.237+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:24:33.236+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T06:24:33.954+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:24:33.941+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 06:24:00+00:00, run_after=2026-03-12 06:25:00+00:00
+[2026-03-12T06:24:34.253+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 1.739 seconds
+[2026-03-12T06:25:17.852+0000] {processor.py:161} INFO - Started process (PID=575) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:25:17.859+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T06:25:17.869+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:25:17.861+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:25:18.014+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:25:18.129+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:25:18.129+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T06:25:18.253+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:25:18.251+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 06:25:00+00:00, run_after=2026-03-12 06:26:00+00:00
+[2026-03-12T06:25:18.352+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.509 seconds
+[2026-03-12T06:25:48.740+0000] {processor.py:161} INFO - Started process (PID=576) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:25:48.752+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T06:25:48.767+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:25:48.754+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:25:48.862+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:25:48.985+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:25:48.984+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T06:25:49.094+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:25:49.094+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 06:25:00+00:00, run_after=2026-03-12 06:26:00+00:00
+[2026-03-12T06:25:49.192+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.473 seconds
+[2026-03-12T06:26:19.385+0000] {processor.py:161} INFO - Started process (PID=584) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:26:19.389+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T06:26:19.391+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:26:19.390+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:26:19.464+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:26:19.603+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:26:19.602+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T06:26:19.750+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:26:19.749+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 06:26:00+00:00, run_after=2026-03-12 06:27:00+00:00
+[2026-03-12T06:26:19.914+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.538 seconds
+[2026-03-12T06:26:51.113+0000] {processor.py:161} INFO - Started process (PID=585) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:26:51.116+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T06:26:51.126+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:26:51.118+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:26:51.209+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:26:51.292+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:26:51.291+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T06:26:51.374+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:26:51.374+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 06:26:00+00:00, run_after=2026-03-12 06:27:00+00:00
+[2026-03-12T06:26:51.427+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.325 seconds
+[2026-03-12T06:27:21.814+0000] {processor.py:161} INFO - Started process (PID=593) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:27:21.821+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T06:27:21.839+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:27:21.824+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:27:21.911+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:27:22.089+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:27:22.088+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T06:27:22.313+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:27:22.312+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 06:27:00+00:00, run_after=2026-03-12 06:28:00+00:00
+[2026-03-12T06:27:22.565+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.766 seconds
+[2026-03-12T06:27:53.605+0000] {processor.py:161} INFO - Started process (PID=594) to work on /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:27:53.622+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_gps.py for tasks to queue
+[2026-03-12T06:27:53.654+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:27:53.627+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:27:53.852+0000] {processor.py:840} INFO - DAG(s) 'pipeline_gps' retrieved from /opt/airflow/dags/pipeline_gps.py
+[2026-03-12T06:27:54.103+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:27:54.103+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-03-12T06:27:54.302+0000] {logging_mixin.py:188} INFO - [2026-03-12T06:27:54.300+0000] {dag.py:3823} INFO - Setting next_dagrun for pipeline_gps to 2026-03-12 06:27:00+00:00, run_after=2026-03-12 06:28:00+00:00
+[2026-03-12T06:27:54.444+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_gps.py took 0.894 seconds

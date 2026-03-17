@@ -1,0 +1,162 @@
+name: monitoreo-e-ingesta-de-datos
+
+services:
+
+  mqtt:
+    image: eclipse-mosquitto
+    container_name: mqtt-broker
+    ports:
+      - "1883:1883"
+    networks:
+      - monitoreo-red
+    restart: unless-stopped
+
+  postgres:
+    image: postgis/postgis:15-3.4
+    container_name: postgres-postgis
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: monitoreo
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./init-db.sql:/docker-entrypoint-initdb.d/init-db.sql
+    networks:
+      - monitoreo-red
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U admin -d monitoreo"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  kafka:
+    image: apache/kafka:3.7.0
+    container_name: kafka
+    ports:
+      - "9092:9092"
+    environment:
+      KAFKA_NODE_ID: 1
+      KAFKA_PROCESS_ROLES: broker,controller
+      KAFKA_CONTROLLER_QUORUM_VOTERS: 1@kafka:9093
+      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092,CONTROLLER://0.0.0.0:9093
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092
+      KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT
+    networks:
+      - monitoreo-red
+    restart: unless-stopped
+
+  airflow-webserver:
+    build:
+      context: .
+      dockerfile: Dockerfile.airflow
+    container_name: airflow-webserver
+    restart: always
+    ports:
+      - "8080:8080"
+    volumes:
+      - /home/nsx/monitoreo-e-ingesta-de-datos:/opt/airflow
+    environment:
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://admin:admin@postgres-postgis:5432/monitoreo
+      - AIRFLOW__WEBSERVER__SECRET_KEY=4SjT2mypdW7sqQa8QOwtPwhQebnYXIIRFF1+pEex
+      - AIRFLOW__CORE__EXECUTION_TIMEOUT=3600
+      - AIRFLOW__CORE__LOAD_EXAMPLES=False
+      - AIRFLOW__WEBSERVER__BASE_URL=http://localhost:8080
+      - AIRFLOW__LOGGING__BASE_LOG_FOLDER=/opt/airflow/logs
+      - AIRFLOW__LOGGING__REMOTE_LOGGING=False
+      - AIRFLOW__WEBSERVER__EXPOSE_CONFIG=True
+    command: webserver
+    networks:
+      - monitoreo-red
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  airflow-scheduler:
+    build:
+      context: .
+      dockerfile: Dockerfile.airflow
+    container_name: airflow-scheduler
+    restart: always
+    volumes:
+      - /home/nsx/monitoreo-e-ingesta-de-datos:/opt/airflow
+    environment:
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://admin:admin@postgres-postgis:5432/monitoreo
+      - AIRFLOW__WEBSERVER__SECRET_KEY=4SjT2mypdW7sqQa8QOwtPwhQebnYXIIRFF1+pEex
+      - AIRFLOW__CORE__EXECUTION_TIMEOUT=3600
+      - AIRFLOW__CORE__LOAD_EXAMPLES=False
+      - AIRFLOW__LOGGING__BASE_LOG_FOLDER=/opt/airflow/logs
+      - AIRFLOW__LOGGING__REMOTE_LOGGING=False
+    command: scheduler
+    networks:
+      - monitoreo-red
+    depends_on:
+      postgres:
+        condition: service_healthy
+      airflow-webserver:
+        condition: service_started
+
+  grafana:
+    image: grafana/grafana:10.2.2
+    container_name: grafana
+    ports:
+      - "3001:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_SECURITY_ADMIN_USER=admin
+    volumes:
+      - grafana-data:/var/lib/grafana
+    networks:
+      - monitoreo-red
+    restart: unless-stopped
+
+  prometheus:
+    image: prom/prometheus:v2.48.0
+    container_name: prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ../monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus-data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+    networks:
+      - monitoreo-red
+    restart: unless-stopped
+
+  cadvisor:
+    image: gcr.io/cadvisor/cadvisor:v0.47.0
+    container_name: cadvisor
+    ports:
+      - "8081:8080"
+    volumes:
+      - /:/rootfs:ro
+      - /var/run:/var/run:ro
+      - /sys:/sys:ro
+      - /var/lib/docker/:/var/lib/docker:ro
+      - /dev/disk/:/dev/disk:ro
+    privileged: true
+    devices:
+      - /dev/kmsg
+    networks:
+      - monitoreo-red
+    restart: unless-stopped
+
+networks:
+  monitoreo-red:
+    driver: bridge
+    name: monitoreo-red
+
+volumes:
+  pgdata:
+    name: postgres-data
+  grafana-data:
+    name: grafana-data
+  prometheus-data:
+    name: prometheus-data

@@ -1,0 +1,34 @@
+[2026-03-16T15:10:07.664+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pipeline_gps.task_process scheduled__2026-03-16T15:05:00+00:00 [queued]>
+[2026-03-16T15:10:07.708+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pipeline_gps.task_process scheduled__2026-03-16T15:05:00+00:00 [queued]>
+[2026-03-16T15:10:07.710+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2026-03-16T15:10:07.811+0000] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): task_process> on 2026-03-16 15:05:00+00:00
+[2026-03-16T15:10:07.826+0000] {standard_task_runner.py:60} INFO - Started process 307 to run task
+[2026-03-16T15:10:07.836+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'pipeline_gps', 'task_process', 'scheduled__2026-03-16T15:05:00+00:00', '--job-id', '607', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_gps.py', '--cfg-path', '/tmp/tmpkfn7hv_q']
+[2026-03-16T15:10:07.841+0000] {standard_task_runner.py:88} INFO - Job 607: Subtask task_process
+[2026-03-16T15:10:07.978+0000] {task_command.py:423} INFO - Running <TaskInstance: pipeline_gps.task_process scheduled__2026-03-16T15:05:00+00:00 [running]> on host e3430f617ad9
+[2026-03-16T15:10:08.161+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='pipeline_gps' AIRFLOW_CTX_TASK_ID='task_process' AIRFLOW_CTX_EXECUTION_DATE='2026-03-16T15:05:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-16T15:05:00+00:00'
+[2026-03-16T15:10:08.165+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-03-16T15:10:08.167+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/airflow/spark/spark_processor.py']
+[2026-03-16T15:10:08.193+0000] {subprocess.py:86} INFO - Output:
+[2026-03-16T15:10:17.769+0000] {subprocess.py:93} INFO - 26/03/16 15:10:17 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2026-03-16T15:10:18.551+0000] {subprocess.py:93} INFO - Setting default log level to "WARN".
+[2026-03-16T15:10:18.552+0000] {subprocess.py:93} INFO - To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+[2026-03-16T15:10:27.550+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2026-03-16T15:10:27.551+0000] {subprocess.py:93} INFO -   File "/opt/airflow/spark/spark_processor.py", line 10, in <module>
+[2026-03-16T15:10:27.552+0000] {subprocess.py:93} INFO -     conn = psycopg2.connect(
+[2026-03-16T15:10:27.552+0000] {subprocess.py:93} INFO -   File "/home/airflow/.local/lib/python3.8/site-packages/psycopg2/__init__.py", line 122, in connect
+[2026-03-16T15:10:27.553+0000] {subprocess.py:93} INFO -     conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+[2026-03-16T15:10:27.553+0000] {subprocess.py:93} INFO - psycopg2.OperationalError: could not translate host name "postgres-postgis" to address: Name or service not known
+[2026-03-16T15:10:27.554+0000] {subprocess.py:93} INFO - 
+[2026-03-16T15:10:28.412+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2026-03-16T15:10:28.462+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 212, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2026-03-16T15:10:28.477+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=pipeline_gps, task_id=task_process, execution_date=20260316T150500, start_date=20260316T151007, end_date=20260316T151028
+[2026-03-16T15:10:28.557+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 607 for task task_process (Bash command failed. The command returned a non-zero exit code 1.; 307)
+[2026-03-16T15:10:28.589+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2026-03-16T15:10:28.669+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

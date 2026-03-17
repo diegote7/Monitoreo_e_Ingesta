@@ -1,0 +1,25 @@
+[2026-03-12T05:57:14.440+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pipeline_gps.task1_ingest scheduled__2026-03-12T05:56:00+00:00 [queued]>
+[2026-03-12T05:57:14.495+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pipeline_gps.task1_ingest scheduled__2026-03-12T05:56:00+00:00 [queued]>
+[2026-03-12T05:57:14.497+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2026-03-12T05:57:14.546+0000] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): task1_ingest> on 2026-03-12 05:56:00+00:00
+[2026-03-12T05:57:14.558+0000] {standard_task_runner.py:60} INFO - Started process 325 to run task
+[2026-03-12T05:57:14.575+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'pipeline_gps', 'task1_ingest', 'scheduled__2026-03-12T05:56:00+00:00', '--job-id', '35', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_gps.py', '--cfg-path', '/tmp/tmpxkr5junl']
+[2026-03-12T05:57:14.580+0000] {standard_task_runner.py:88} INFO - Job 35: Subtask task1_ingest
+[2026-03-12T05:57:14.695+0000] {task_command.py:423} INFO - Running <TaskInstance: pipeline_gps.task1_ingest scheduled__2026-03-12T05:56:00+00:00 [running]> on host d8c8b9145f7b
+[2026-03-12T05:57:14.522+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='pipeline_gps' AIRFLOW_CTX_TASK_ID='task1_ingest' AIRFLOW_CTX_EXECUTION_DATE='2026-03-12T05:56:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-12T05:56:00+00:00'
+[2026-03-12T05:57:14.590+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-03-12T05:57:14.595+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /app/ingestion/mqtt_ingest.py']
+[2026-03-12T05:57:12.320+0000] {subprocess.py:86} INFO - Output:
+[2026-03-12T05:57:13.162+0000] {subprocess.py:93} INFO - python: can't open file '/app/ingestion/mqtt_ingest.py': [Errno 2] No such file or directory
+[2026-03-12T05:57:13.185+0000] {subprocess.py:97} INFO - Command exited with return code 2
+[2026-03-12T05:57:13.236+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 212, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 2.
+[2026-03-12T05:57:13.258+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=pipeline_gps, task_id=task1_ingest, execution_date=20260312T055600, start_date=20260312T055714, end_date=20260312T055713
+[2026-03-12T05:57:13.371+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 35 for task task1_ingest (Bash command failed. The command returned a non-zero exit code 2.; 325)
+[2026-03-12T05:57:13.446+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2026-03-12T05:57:13.625+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

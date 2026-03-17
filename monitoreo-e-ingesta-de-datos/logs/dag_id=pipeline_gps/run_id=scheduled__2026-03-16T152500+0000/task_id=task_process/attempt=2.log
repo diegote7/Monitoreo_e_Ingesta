@@ -1,0 +1,15 @@
+[2026-03-16T15:52:50.181+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pipeline_gps.task_process scheduled__2026-03-16T15:25:00+00:00 [queued]>
+[2026-03-16T15:52:50.225+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pipeline_gps.task_process scheduled__2026-03-16T15:25:00+00:00 [queued]>
+[2026-03-16T15:52:50.228+0000] {taskinstance.py:2170} INFO - Starting attempt 2 of 1
+[2026-03-16T15:52:50.430+0000] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): task_process> on 2026-03-16 15:25:00+00:00
+[2026-03-16T15:52:50.443+0000] {standard_task_runner.py:60} INFO - Started process 30 to run task
+[2026-03-16T15:52:50.467+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'pipeline_gps', 'task_process', 'scheduled__2026-03-16T15:25:00+00:00', '--job-id', '612', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_gps.py', '--cfg-path', '/tmp/tmpyptp_u53']
+[2026-03-16T15:52:50.487+0000] {standard_task_runner.py:88} INFO - Job 612: Subtask task_process
+[2026-03-16T15:52:50.754+0000] {task_command.py:423} INFO - Running <TaskInstance: pipeline_gps.task_process scheduled__2026-03-16T15:25:00+00:00 [running]> on host e3430f617ad9
+[2026-03-16T15:52:51.055+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='pipeline_gps' AIRFLOW_CTX_TASK_ID='task_process' AIRFLOW_CTX_EXECUTION_DATE='2026-03-16T15:25:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-16T15:25:00+00:00'
+[2026-03-16T15:52:51.057+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-03-16T15:52:51.059+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/airflow/spark/spark_processor.py']
+[2026-03-16T15:52:51.090+0000] {subprocess.py:86} INFO - Output:
+[2026-03-16T15:53:00.599+0000] {subprocess.py:93} INFO - 26/03/16 15:53:00 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2026-03-16T15:53:01.892+0000] {subprocess.py:93} INFO - Setting default log level to "WARN".
+[2026-03-16T15:53:01.894+0000] {subprocess.py:93} INFO - To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).

@@ -1,0 +1,36 @@
+[2026-03-16T19:55:28.477+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pipeline_gps.process_gps_data scheduled__2026-03-16T19:40:00+00:00 [queued]>
+[2026-03-16T19:55:28.498+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pipeline_gps.process_gps_data scheduled__2026-03-16T19:40:00+00:00 [queued]>
+[2026-03-16T19:55:28.498+0000] {taskinstance.py:2170} INFO - Starting attempt 3 of 3
+[2026-03-16T19:55:28.534+0000] {taskinstance.py:2191} INFO - Executing <Task(SparkSubmitOperator): process_gps_data> on 2026-03-16 19:40:00+00:00
+[2026-03-16T19:55:28.543+0000] {standard_task_runner.py:60} INFO - Started process 610 to run task
+[2026-03-16T19:55:28.553+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'pipeline_gps', 'process_gps_data', 'scheduled__2026-03-16T19:40:00+00:00', '--job-id', '30', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_gps.py', '--cfg-path', '/tmp/tmp843n4duu']
+[2026-03-16T19:55:28.560+0000] {standard_task_runner.py:88} INFO - Job 30: Subtask process_gps_data
+[2026-03-16T19:55:28.748+0000] {task_command.py:423} INFO - Running <TaskInstance: pipeline_gps.process_gps_data scheduled__2026-03-16T19:40:00+00:00 [running]> on host 95dbc7519d7f
+[2026-03-16T19:55:29.177+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='pipeline_gps' AIRFLOW_CTX_TASK_ID='process_gps_data' AIRFLOW_CTX_EXECUTION_DATE='2026-03-16T19:40:00+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-16T19:40:00+00:00'
+[2026-03-16T19:55:29.245+0000] {base.py:83} INFO - Using connection ID 'spark_default' for task execution.
+[2026-03-16T19:55:29.248+0000] {spark_submit.py:473} INFO - Spark-Submit cmd: spark-submit --master yarn --conf spark.jars=/opt/airflow/spark/jars/postgresql-42.7.3.jar --conf spark.sql.debug.maxToStringFields=100 --conf spark.yarn.appMasterEnv.DB_HOST=postgres-postgis --conf spark.yarn.appMasterEnv.DB_USER=*** --conf spark.yarn.appMasterEnv.DB_PASSWORD=****** --conf spark.yarn.appMasterEnv.DB_NAME=monitoreo --total-executor-cores 1 --executor-cores 1 --executor-memory 1g --driver-memory 512m --name airflow-spark-gps --verbose --queue root.default /opt/airflow/spark/spark_processor.py
+[2026-03-16T19:55:34.548+0000] {spark_submit.py:649} INFO - Using properties file: null
+[2026-03-16T19:55:35.402+0000] {spark_submit.py:649} INFO - Exception in thread "main" org.apache.spark.SparkException: When running with master 'yarn' either HADOOP_CONF_DIR or YARN_CONF_DIR must be set in the environment.
+[2026-03-16T19:55:35.405+0000] {spark_submit.py:649} INFO - at org.apache.spark.deploy.SparkSubmitArguments.error(SparkSubmitArguments.scala:650)
+[2026-03-16T19:55:35.407+0000] {spark_submit.py:649} INFO - at org.apache.spark.deploy.SparkSubmitArguments.validateSubmitArguments(SparkSubmitArguments.scala:281)
+[2026-03-16T19:55:35.409+0000] {spark_submit.py:649} INFO - at org.apache.spark.deploy.SparkSubmitArguments.validateArguments(SparkSubmitArguments.scala:237)
+[2026-03-16T19:55:35.410+0000] {spark_submit.py:649} INFO - at org.apache.spark.deploy.SparkSubmitArguments.<init>(SparkSubmitArguments.scala:122)
+[2026-03-16T19:55:35.412+0000] {spark_submit.py:649} INFO - at org.apache.spark.deploy.SparkSubmit$$anon$2$$anon$3.<init>(SparkSubmit.scala:1108)
+[2026-03-16T19:55:35.415+0000] {spark_submit.py:649} INFO - at org.apache.spark.deploy.SparkSubmit$$anon$2.parseArguments(SparkSubmit.scala:1108)
+[2026-03-16T19:55:35.419+0000] {spark_submit.py:649} INFO - at org.apache.spark.deploy.SparkSubmit.doSubmit(SparkSubmit.scala:86)
+[2026-03-16T19:55:35.421+0000] {spark_submit.py:649} INFO - at org.apache.spark.deploy.SparkSubmit$$anon$2.doSubmit(SparkSubmit.scala:1125)
+[2026-03-16T19:55:35.423+0000] {spark_submit.py:649} INFO - at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:1134)
+[2026-03-16T19:55:35.425+0000] {spark_submit.py:649} INFO - at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+[2026-03-16T19:55:35.561+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/apache/spark/operators/spark_submit.py", line 176, in execute
+    self._hook.submit(self.application)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/apache/spark/hooks/spark_submit.py", line 575, in submit
+    raise AirflowException(
+airflow.exceptions.AirflowException: Cannot execute: spark-submit --master yarn --conf spark.jars=/opt/airflow/spark/jars/postgresql-42.7.3.jar --conf spark.sql.debug.maxToStringFields=100 --conf spark.yarn.appMasterEnv.DB_HOST=postgres-postgis --conf spark.yarn.appMasterEnv.DB_USER=*** --conf spark.yarn.appMasterEnv.DB_PASSWORD=****** --conf spark.yarn.appMasterEnv.DB_NAME=monitoreo --total-executor-cores 1 --executor-cores 1 --executor-memory 1g --driver-memory 512m --name airflow-spark-gps --verbose --queue root.default /opt/airflow/spark/spark_processor.py. Error code is: 1.
+[2026-03-16T19:55:35.596+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=pipeline_gps, task_id=process_gps_data, execution_date=20260316T194000, start_date=20260316T195528, end_date=20260316T195535
+[2026-03-16T19:55:35.671+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 30 for task process_gps_data (Cannot execute: spark-submit --master yarn --conf spark.jars=/opt/airflow/spark/jars/postgresql-42.7.3.jar --conf spark.sql.debug.maxToStringFields=100 --conf spark.yarn.appMasterEnv.DB_HOST=postgres-postgis --conf spark.yarn.appMasterEnv.DB_USER=*** --conf spark.yarn.appMasterEnv.DB_PASSWORD=****** --conf spark.yarn.appMasterEnv.DB_NAME=monitoreo --total-executor-cores 1 --executor-cores 1 --executor-memory 1g --driver-memory 512m --name airflow-spark-gps --verbose --queue root.default /opt/airflow/spark/spark_processor.py. Error code is: 1.; 610)
+[2026-03-16T19:55:35.688+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2026-03-16T19:55:35.762+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

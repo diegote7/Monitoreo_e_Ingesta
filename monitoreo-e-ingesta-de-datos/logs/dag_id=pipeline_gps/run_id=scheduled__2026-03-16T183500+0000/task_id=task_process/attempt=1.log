@@ -1,0 +1,367 @@
+[2026-03-16T18:43:27.332+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pipeline_gps.task_process scheduled__2026-03-16T18:35:00+00:00 [queued]>
+[2026-03-16T18:43:27.382+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pipeline_gps.task_process scheduled__2026-03-16T18:35:00+00:00 [queued]>
+[2026-03-16T18:43:27.383+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2026-03-16T18:43:27.458+0000] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): task_process> on 2026-03-16 18:35:00+00:00
+[2026-03-16T18:43:27.467+0000] {standard_task_runner.py:60} INFO - Started process 1434 to run task
+[2026-03-16T18:43:27.482+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'pipeline_gps', 'task_process', 'scheduled__2026-03-16T18:35:00+00:00', '--job-id', '11', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_gps.py', '--cfg-path', '/tmp/tmp5bh7uauw']
+[2026-03-16T18:43:27.495+0000] {standard_task_runner.py:88} INFO - Job 11: Subtask task_process
+[2026-03-16T18:43:27.701+0000] {task_command.py:423} INFO - Running <TaskInstance: pipeline_gps.task_process scheduled__2026-03-16T18:35:00+00:00 [running]> on host 95dbc7519d7f
+[2026-03-16T18:43:28.127+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='pipeline_gps' AIRFLOW_CTX_TASK_ID='task_process' AIRFLOW_CTX_EXECUTION_DATE='2026-03-16T18:35:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-16T18:35:00+00:00'
+[2026-03-16T18:43:28.167+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-03-16T18:43:28.173+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/airflow/spark/spark_processor.py']
+[2026-03-16T18:43:28.214+0000] {subprocess.py:86} INFO - Output:
+[2026-03-16T18:43:36.842+0000] {subprocess.py:93} INFO - 26/03/16 18:43:36 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2026-03-16T18:43:37.345+0000] {subprocess.py:93} INFO - Setting default log level to "WARN".
+[2026-03-16T18:43:37.347+0000] {subprocess.py:93} INFO - To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+[2026-03-16T18:43:41.028+0000] {subprocess.py:93} INFO - 26/03/16 18:43:41 WARN Utils: Service 'SparkUI' could not bind on port 4040. Attempting port 4041.
+[2026-03-16T18:45:16.636+0000] {job.py:213} ERROR - Job heartbeat got an exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+    return fn()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+    return self._create_connection()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.8/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: could not translate host name "postgres-postgis" to address: Temporary failure in name resolution
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/jobs/job.py", line 208, in heartbeat
+    heartbeat_callback(session)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/jobs/local_task_job_runner.py", line 252, in heartbeat_callback
+    self.task_instance.refresh_from_db()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/session.py", line 79, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1725, in refresh_from_db
+    _refresh_from_db(task_instance=self, session=session, lock_for_update=lock_for_update)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 464, in _refresh_from_db
+    ti = TaskInstance.get_task_instance(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/api_internal/internal_api_call.py", line 114, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1711, in get_task_instance
+    return query.one_or_none()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2850, in one_or_none
+    return self._iter().one_or_none()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2916, in _iter
+    result = self.session.execute(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1716, in execute
+    conn = self._connection_for_bind(bind)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1555, in _connection_for_bind
+    return self._transaction._connection_for_bind(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 750, in _connection_for_bind
+    conn = bind.connect()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/future/engine.py", line 412, in connect
+    return super(Engine, self).connect()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3325, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3404, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3374, in _wrap_pool_connect
+    Connection._handle_dbapi_exception_noconnection(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 2208, in _handle_dbapi_exception_noconnection
+    util.raise_(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+    return fn()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+    return self._create_connection()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.8/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) could not translate host name "postgres-postgis" to address: Temporary failure in name resolution
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+[2026-03-16T18:45:17.035+0000] {job.py:221} ERROR - Job heartbeat failed with error. Scheduler is in unhealthy state
+[2026-03-16T18:45:32.242+0000] {job.py:221} ERROR - Job heartbeat failed with error. Scheduler is in unhealthy state
+[2026-03-16T18:45:46.951+0000] {job.py:221} ERROR - Job heartbeat failed with error. Scheduler is in unhealthy state
+[2026-03-16T18:46:04.284+0000] {job.py:221} ERROR - Job heartbeat failed with error. Scheduler is in unhealthy state
+[2026-03-16T18:46:04.828+0000] {subprocess.py:93} INFO - [Stage 0:>                                                          (0 + 1) / 1][Stage 0:===========================================================(1 + 0) / 1][Stage 2:>                                                          (0 + 1) / 1]                                                                                [Stage 3:>                                                          (0 + 1) / 1]                                                                                [Stage 6:>                                                          (0 + 1) / 1]                                                                                [Stage 9:>                                                          (0 + 1) / 1]                                                                                [Stage 12:>                                                         (0 + 0) / 1][Stage 12:>                                                         (0 + 1) / 1]26/03/16 18:46:04 ERROR Executor: Exception in task 0.0 in stage 12.0 (TID 8)
+[2026-03-16T18:46:04.919+0000] {subprocess.py:93} INFO - org.postgresql.util.PSQLException: The connection attempt failed.
+[2026-03-16T18:46:04.930+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:358)
+[2026-03-16T18:46:04.931+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+[2026-03-16T18:46:04.932+0000] {subprocess.py:93} INFO - 	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:273)
+[2026-03-16T18:46:04.934+0000] {subprocess.py:93} INFO - 	at org.postgresql.Driver.makeConnection(Driver.java:446)
+[2026-03-16T18:46:04.934+0000] {subprocess.py:93} INFO - 	at org.postgresql.Driver.connect(Driver.java:298)
+[2026-03-16T18:46:04.949+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.connection.BasicConnectionProvider.getConnection(BasicConnectionProvider.scala:49)
+[2026-03-16T18:46:04.950+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.connection.ConnectionProviderBase.create(ConnectionProvider.scala:102)
+[2026-03-16T18:46:04.951+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.jdbc.JdbcDialect.$anonfun$createConnectionFactory$1(JdbcDialects.scala:161)
+[2026-03-16T18:46:04.964+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.jdbc.JdbcDialect.$anonfun$createConnectionFactory$1$adapted(JdbcDialects.scala:157)
+[2026-03-16T18:46:04.964+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JDBCRDD.compute(JDBCRDD.scala:258)
+[2026-03-16T18:46:04.985+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:367)
+[2026-03-16T18:46:04.992+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.iterator(RDD.scala:331)
+[2026-03-16T18:46:04.992+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+[2026-03-16T18:46:04.993+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:367)
+[2026-03-16T18:46:05.042+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.iterator(RDD.scala:331)
+[2026-03-16T18:46:05.042+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+[2026-03-16T18:46:05.043+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:367)
+[2026-03-16T18:46:05.044+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.iterator(RDD.scala:331)
+[2026-03-16T18:46:05.044+0000] {subprocess.py:93} INFO - 	at org.apache.spark.shuffle.ShuffleWriteProcessor.write(ShuffleWriteProcessor.scala:59)
+[2026-03-16T18:46:05.045+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:104)
+[2026-03-16T18:46:05.045+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:54)
+[2026-03-16T18:46:05.046+0000] {subprocess.py:93} INFO - 	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:166)
+[2026-03-16T18:46:05.046+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+[2026-03-16T18:46:05.047+0000] {subprocess.py:93} INFO - 	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$4(Executor.scala:621)
+[2026-03-16T18:46:05.047+0000] {subprocess.py:93} INFO - 	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally(SparkErrorUtils.scala:64)
+[2026-03-16T18:46:05.048+0000] {subprocess.py:93} INFO - 	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally$(SparkErrorUtils.scala:61)
+[2026-03-16T18:46:05.048+0000] {subprocess.py:93} INFO - 	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:94)
+[2026-03-16T18:46:05.049+0000] {subprocess.py:93} INFO - 	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:624)
+[2026-03-16T18:46:05.049+0000] {subprocess.py:93} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+[2026-03-16T18:46:05.050+0000] {subprocess.py:93} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+[2026-03-16T18:46:05.051+0000] {subprocess.py:93} INFO - 	at java.base/java.lang.Thread.run(Thread.java:840)
+[2026-03-16T18:46:05.051+0000] {subprocess.py:93} INFO - Caused by: java.net.UnknownHostException: postgres-postgis
+[2026-03-16T18:46:05.052+0000] {subprocess.py:93} INFO - 	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:572)
+[2026-03-16T18:46:05.064+0000] {subprocess.py:93} INFO - 	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+[2026-03-16T18:46:05.065+0000] {subprocess.py:93} INFO - 	at java.base/java.net.Socket.connect(Socket.java:633)
+[2026-03-16T18:46:05.065+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.PGStream.createSocket(PGStream.java:243)
+[2026-03-16T18:46:05.066+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.PGStream.<init>(PGStream.java:98)
+[2026-03-16T18:46:05.067+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:136)
+[2026-03-16T18:46:05.067+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:262)
+[2026-03-16T18:46:05.081+0000] {subprocess.py:93} INFO - 	... 30 more
+[2026-03-16T18:46:08.189+0000] {subprocess.py:93} INFO - 26/03/16 18:46:08 WARN TaskSetManager: Lost task 0.0 in stage 12.0 (TID 8) (95dbc7519d7f executor driver): org.postgresql.util.PSQLException: The connection attempt failed.
+[2026-03-16T18:46:08.229+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:358)
+[2026-03-16T18:46:08.230+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+[2026-03-16T18:46:08.233+0000] {subprocess.py:93} INFO - 	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:273)
+[2026-03-16T18:46:08.234+0000] {subprocess.py:93} INFO - 	at org.postgresql.Driver.makeConnection(Driver.java:446)
+[2026-03-16T18:46:08.235+0000] {subprocess.py:93} INFO - 	at org.postgresql.Driver.connect(Driver.java:298)
+[2026-03-16T18:46:08.235+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.connection.BasicConnectionProvider.getConnection(BasicConnectionProvider.scala:49)
+[2026-03-16T18:46:08.236+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.connection.ConnectionProviderBase.create(ConnectionProvider.scala:102)
+[2026-03-16T18:46:08.237+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.jdbc.JdbcDialect.$anonfun$createConnectionFactory$1(JdbcDialects.scala:161)
+[2026-03-16T18:46:08.238+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.jdbc.JdbcDialect.$anonfun$createConnectionFactory$1$adapted(JdbcDialects.scala:157)
+[2026-03-16T18:46:08.238+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JDBCRDD.compute(JDBCRDD.scala:258)
+[2026-03-16T18:46:08.242+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:367)
+[2026-03-16T18:46:08.246+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.iterator(RDD.scala:331)
+[2026-03-16T18:46:08.248+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+[2026-03-16T18:46:08.250+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:367)
+[2026-03-16T18:46:08.251+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.iterator(RDD.scala:331)
+[2026-03-16T18:46:08.251+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+[2026-03-16T18:46:08.252+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:367)
+[2026-03-16T18:46:08.253+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.iterator(RDD.scala:331)
+[2026-03-16T18:46:08.254+0000] {subprocess.py:93} INFO - 	at org.apache.spark.shuffle.ShuffleWriteProcessor.write(ShuffleWriteProcessor.scala:59)
+[2026-03-16T18:46:08.254+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:104)
+[2026-03-16T18:46:08.255+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:54)
+[2026-03-16T18:46:08.256+0000] {subprocess.py:93} INFO - 	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:166)
+[2026-03-16T18:46:08.259+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+[2026-03-16T18:46:08.262+0000] {subprocess.py:93} INFO - 	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$4(Executor.scala:621)
+[2026-03-16T18:46:08.263+0000] {subprocess.py:93} INFO - 	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally(SparkErrorUtils.scala:64)
+[2026-03-16T18:46:08.265+0000] {subprocess.py:93} INFO - 	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally$(SparkErrorUtils.scala:61)
+[2026-03-16T18:46:08.266+0000] {subprocess.py:93} INFO - 	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:94)
+[2026-03-16T18:46:08.266+0000] {subprocess.py:93} INFO - 	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:624)
+[2026-03-16T18:46:08.267+0000] {subprocess.py:93} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+[2026-03-16T18:46:08.268+0000] {subprocess.py:93} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+[2026-03-16T18:46:08.268+0000] {subprocess.py:93} INFO - 	at java.base/java.lang.Thread.run(Thread.java:840)
+[2026-03-16T18:46:08.269+0000] {subprocess.py:93} INFO - Caused by: java.net.UnknownHostException: postgres-postgis
+[2026-03-16T18:46:08.269+0000] {subprocess.py:93} INFO - 	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:572)
+[2026-03-16T18:46:08.270+0000] {subprocess.py:93} INFO - 	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+[2026-03-16T18:46:08.271+0000] {subprocess.py:93} INFO - 	at java.base/java.net.Socket.connect(Socket.java:633)
+[2026-03-16T18:46:08.271+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.PGStream.createSocket(PGStream.java:243)
+[2026-03-16T18:46:08.272+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.PGStream.<init>(PGStream.java:98)
+[2026-03-16T18:46:08.273+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:136)
+[2026-03-16T18:46:08.273+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:262)
+[2026-03-16T18:46:08.274+0000] {subprocess.py:93} INFO - 	... 30 more
+[2026-03-16T18:46:08.275+0000] {subprocess.py:93} INFO - 
+[2026-03-16T18:46:08.276+0000] {subprocess.py:93} INFO - 26/03/16 18:46:08 ERROR TaskSetManager: Task 0 in stage 12.0 failed 1 times; aborting job
+[2026-03-16T18:46:18.819+0000] {job.py:221} ERROR - Job heartbeat failed with error. Scheduler is in unhealthy state
+[2026-03-16T18:46:33.961+0000] {job.py:221} ERROR - Job heartbeat failed with error. Scheduler is in unhealthy state
+[2026-03-16T18:46:48.655+0000] {job.py:221} ERROR - Job heartbeat failed with error. Scheduler is in unhealthy state
+[2026-03-16T18:47:06.784+0000] {job.py:221} ERROR - Job heartbeat failed with error. Scheduler is in unhealthy state
+[2026-03-16T18:47:27.230+0000] {job.py:221} ERROR - Job heartbeat failed with error. Scheduler is in unhealthy state
+[2026-03-16T18:47:44.482+0000] {subprocess.py:93} INFO - ❌ Error: syntax error at or near "registros"
+[2026-03-16T18:47:44.652+0000] {job.py:221} ERROR - Job heartbeat failed with error. Scheduler is in unhealthy state
+[2026-03-16T18:47:44.682+0000] {subprocess.py:93} INFO - LINE 4:                 total_ registros, periodo_inicio, periodo_fi...
+[2026-03-16T18:47:45.005+0000] {subprocess.py:93} INFO -                                ^
+[2026-03-16T18:47:45.095+0000] {subprocess.py:93} INFO - 
+[2026-03-16T18:47:45.103+0000] {subprocess.py:93} INFO - ❌ Error: syntax error at or near "registros"
+[2026-03-16T18:47:45.109+0000] {subprocess.py:93} INFO - LINE 4:                 total_ registros, periodo_inicio, periodo_fi...
+[2026-03-16T18:47:45.111+0000] {subprocess.py:93} INFO -                                ^
+[2026-03-16T18:47:45.112+0000] {subprocess.py:93} INFO - 
+[2026-03-16T18:47:45.115+0000] {subprocess.py:93} INFO - ❌ Error: syntax error at or near "registros"
+[2026-03-16T18:47:45.116+0000] {subprocess.py:93} INFO - LINE 4:                 total_ registros, periodo_inicio, periodo_fi...
+[2026-03-16T18:47:45.116+0000] {subprocess.py:93} INFO -                                ^
+[2026-03-16T18:47:45.117+0000] {subprocess.py:93} INFO - 
+[2026-03-16T18:47:45.117+0000] {subprocess.py:93} INFO - ❌ Error: syntax error at or near "registros"
+[2026-03-16T18:47:45.118+0000] {subprocess.py:93} INFO - LINE 4:                 total_ registros, periodo_inicio, periodo_fi...
+[2026-03-16T18:47:45.119+0000] {subprocess.py:93} INFO -                                ^
+[2026-03-16T18:47:45.122+0000] {subprocess.py:93} INFO - 
+[2026-03-16T18:47:45.128+0000] {subprocess.py:93} INFO - ❌ Error: An error occurred while calling o86.collectToPython.
+[2026-03-16T18:47:45.141+0000] {subprocess.py:93} INFO - : org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 12.0 failed 1 times, most recent failure: Lost task 0.0 in stage 12.0 (TID 8) (95dbc7519d7f executor driver): org.postgresql.util.PSQLException: The connection attempt failed.
+[2026-03-16T18:47:45.141+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:358)
+[2026-03-16T18:47:45.142+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+[2026-03-16T18:47:45.142+0000] {subprocess.py:93} INFO - 	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:273)
+[2026-03-16T18:47:45.143+0000] {subprocess.py:93} INFO - 	at org.postgresql.Driver.makeConnection(Driver.java:446)
+[2026-03-16T18:47:45.143+0000] {subprocess.py:93} INFO - 	at org.postgresql.Driver.connect(Driver.java:298)
+[2026-03-16T18:47:45.154+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.connection.BasicConnectionProvider.getConnection(BasicConnectionProvider.scala:49)
+[2026-03-16T18:47:45.155+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.connection.ConnectionProviderBase.create(ConnectionProvider.scala:102)
+[2026-03-16T18:47:45.156+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.jdbc.JdbcDialect.$anonfun$createConnectionFactory$1(JdbcDialects.scala:161)
+[2026-03-16T18:47:45.157+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.jdbc.JdbcDialect.$anonfun$createConnectionFactory$1$adapted(JdbcDialects.scala:157)
+[2026-03-16T18:47:45.164+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JDBCRDD.compute(JDBCRDD.scala:258)
+[2026-03-16T18:47:45.169+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:367)
+[2026-03-16T18:47:45.171+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.iterator(RDD.scala:331)
+[2026-03-16T18:47:45.172+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+[2026-03-16T18:47:45.173+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:367)
+[2026-03-16T18:47:45.175+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.iterator(RDD.scala:331)
+[2026-03-16T18:47:45.176+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+[2026-03-16T18:47:45.181+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:367)
+[2026-03-16T18:47:45.182+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.iterator(RDD.scala:331)
+[2026-03-16T18:47:45.188+0000] {subprocess.py:93} INFO - 	at org.apache.spark.shuffle.ShuffleWriteProcessor.write(ShuffleWriteProcessor.scala:59)
+[2026-03-16T18:47:45.190+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:104)
+[2026-03-16T18:47:45.192+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:54)
+[2026-03-16T18:47:45.194+0000] {subprocess.py:93} INFO - 	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:166)
+[2026-03-16T18:47:45.195+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+[2026-03-16T18:47:45.196+0000] {subprocess.py:93} INFO - 	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$4(Executor.scala:621)
+[2026-03-16T18:47:45.197+0000] {subprocess.py:93} INFO - 	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally(SparkErrorUtils.scala:64)
+[2026-03-16T18:47:45.198+0000] {subprocess.py:93} INFO - 	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally$(SparkErrorUtils.scala:61)
+[2026-03-16T18:47:45.203+0000] {subprocess.py:93} INFO - 	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:94)
+[2026-03-16T18:47:45.204+0000] {subprocess.py:93} INFO - 	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:624)
+[2026-03-16T18:47:45.206+0000] {subprocess.py:93} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+[2026-03-16T18:47:45.207+0000] {subprocess.py:93} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+[2026-03-16T18:47:45.207+0000] {subprocess.py:93} INFO - 	at java.base/java.lang.Thread.run(Thread.java:840)
+[2026-03-16T18:47:45.210+0000] {subprocess.py:93} INFO - Caused by: java.net.UnknownHostException: postgres-postgis
+[2026-03-16T18:47:45.217+0000] {subprocess.py:93} INFO - 	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:572)
+[2026-03-16T18:47:45.219+0000] {subprocess.py:93} INFO - 	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+[2026-03-16T18:47:45.221+0000] {subprocess.py:93} INFO - 	at java.base/java.net.Socket.connect(Socket.java:633)
+[2026-03-16T18:47:45.223+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.PGStream.createSocket(PGStream.java:243)
+[2026-03-16T18:47:45.226+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.PGStream.<init>(PGStream.java:98)
+[2026-03-16T18:47:45.227+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:136)
+[2026-03-16T18:47:45.230+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:262)
+[2026-03-16T18:47:45.233+0000] {subprocess.py:93} INFO - 	... 30 more
+[2026-03-16T18:47:45.238+0000] {subprocess.py:93} INFO - 
+[2026-03-16T18:47:45.245+0000] {subprocess.py:93} INFO - Driver stacktrace:
+[2026-03-16T18:47:45.246+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.DAGScheduler.failJobAndIndependentStages(DAGScheduler.scala:2898)
+[2026-03-16T18:47:45.248+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2(DAGScheduler.scala:2834)
+[2026-03-16T18:47:45.250+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2$adapted(DAGScheduler.scala:2833)
+[2026-03-16T18:47:45.251+0000] {subprocess.py:93} INFO - 	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+[2026-03-16T18:47:45.252+0000] {subprocess.py:93} INFO - 	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+[2026-03-16T18:47:45.254+0000] {subprocess.py:93} INFO - 	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+[2026-03-16T18:47:45.255+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:2833)
+[2026-03-16T18:47:45.256+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1(DAGScheduler.scala:1253)
+[2026-03-16T18:47:45.266+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1$adapted(DAGScheduler.scala:1253)
+[2026-03-16T18:47:45.268+0000] {subprocess.py:93} INFO - 	at scala.Option.foreach(Option.scala:407)
+[2026-03-16T18:47:45.272+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:1253)
+[2026-03-16T18:47:45.277+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:3102)
+[2026-03-16T18:47:45.282+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:3036)
+[2026-03-16T18:47:45.283+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:3025)
+[2026-03-16T18:47:45.285+0000] {subprocess.py:93} INFO - 	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:49)
+[2026-03-16T18:47:45.290+0000] {subprocess.py:93} INFO - Caused by: org.postgresql.util.PSQLException: The connection attempt failed.
+[2026-03-16T18:47:45.293+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:358)
+[2026-03-16T18:47:45.295+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+[2026-03-16T18:47:45.296+0000] {subprocess.py:93} INFO - 	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:273)
+[2026-03-16T18:47:45.298+0000] {subprocess.py:93} INFO - 	at org.postgresql.Driver.makeConnection(Driver.java:446)
+[2026-03-16T18:47:45.311+0000] {subprocess.py:93} INFO - 	at org.postgresql.Driver.connect(Driver.java:298)
+[2026-03-16T18:47:45.313+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.connection.BasicConnectionProvider.getConnection(BasicConnectionProvider.scala:49)
+[2026-03-16T18:47:45.315+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.connection.ConnectionProviderBase.create(ConnectionProvider.scala:102)
+[2026-03-16T18:47:45.316+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.jdbc.JdbcDialect.$anonfun$createConnectionFactory$1(JdbcDialects.scala:161)
+[2026-03-16T18:47:45.317+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.jdbc.JdbcDialect.$anonfun$createConnectionFactory$1$adapted(JdbcDialects.scala:157)
+[2026-03-16T18:47:45.322+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JDBCRDD.compute(JDBCRDD.scala:258)
+[2026-03-16T18:47:45.327+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:367)
+[2026-03-16T18:47:45.333+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.iterator(RDD.scala:331)
+[2026-03-16T18:47:45.334+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+[2026-03-16T18:47:45.336+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:367)
+[2026-03-16T18:47:45.337+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.iterator(RDD.scala:331)
+[2026-03-16T18:47:45.338+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+[2026-03-16T18:47:45.340+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:367)
+[2026-03-16T18:47:45.341+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.iterator(RDD.scala:331)
+[2026-03-16T18:47:45.343+0000] {subprocess.py:93} INFO - 	at org.apache.spark.shuffle.ShuffleWriteProcessor.write(ShuffleWriteProcessor.scala:59)
+[2026-03-16T18:47:45.349+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:104)
+[2026-03-16T18:47:45.351+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:54)
+[2026-03-16T18:47:45.352+0000] {subprocess.py:93} INFO - 	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:166)
+[2026-03-16T18:47:45.353+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+[2026-03-16T18:47:45.354+0000] {subprocess.py:93} INFO - 	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$4(Executor.scala:621)
+[2026-03-16T18:47:45.356+0000] {subprocess.py:93} INFO - 	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally(SparkErrorUtils.scala:64)
+[2026-03-16T18:47:45.357+0000] {subprocess.py:93} INFO - 	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally$(SparkErrorUtils.scala:61)
+[2026-03-16T18:47:45.363+0000] {subprocess.py:93} INFO - 	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:94)
+[2026-03-16T18:47:45.365+0000] {subprocess.py:93} INFO - 	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:624)
+[2026-03-16T18:47:45.367+0000] {subprocess.py:93} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+[2026-03-16T18:47:45.368+0000] {subprocess.py:93} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+[2026-03-16T18:47:45.369+0000] {subprocess.py:93} INFO - 	at java.base/java.lang.Thread.run(Thread.java:840)
+[2026-03-16T18:47:45.371+0000] {subprocess.py:93} INFO - Caused by: java.net.UnknownHostException: postgres-postgis
+[2026-03-16T18:47:45.372+0000] {subprocess.py:93} INFO - 	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:572)
+[2026-03-16T18:47:45.373+0000] {subprocess.py:93} INFO - 	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+[2026-03-16T18:47:45.374+0000] {subprocess.py:93} INFO - 	at java.base/java.net.Socket.connect(Socket.java:633)
+[2026-03-16T18:47:45.376+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.PGStream.createSocket(PGStream.java:243)
+[2026-03-16T18:47:45.378+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.PGStream.<init>(PGStream.java:98)
+[2026-03-16T18:47:45.379+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:136)
+[2026-03-16T18:47:45.382+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:262)
+[2026-03-16T18:47:45.383+0000] {subprocess.py:93} INFO - 	... 30 more
+[2026-03-16T18:47:45.387+0000] {subprocess.py:93} INFO - 
+[2026-03-16T18:48:00.377+0000] {job.py:221} ERROR - Job heartbeat failed with error. Scheduler is in unhealthy state
+[2026-03-16T18:48:15.366+0000] {job.py:221} ERROR - Job heartbeat failed with error. Scheduler is in unhealthy state
+[2026-03-16T18:48:31.664+0000] {job.py:221} ERROR - Job heartbeat failed with error. Scheduler is in unhealthy state
+[2026-03-16T18:48:48.314+0000] {job.py:221} ERROR - Job heartbeat failed with error. Scheduler is in unhealthy state
+[2026-03-16T18:49:05.640+0000] {job.py:221} ERROR - Job heartbeat failed with error. Scheduler is in unhealthy state
+[2026-03-16T18:49:21.688+0000] {job.py:221} ERROR - Job heartbeat failed with error. Scheduler is in unhealthy state
+[2026-03-16T18:49:36.009+0000] {job.py:221} ERROR - Job heartbeat failed with error. Scheduler is in unhealthy state
+[2026-03-16T18:49:51.812+0000] {job.py:221} ERROR - Job heartbeat failed with error. Scheduler is in unhealthy state
+[2026-03-16T18:50:06.921+0000] {job.py:221} ERROR - Job heartbeat failed with error. Scheduler is in unhealthy state
+[2026-03-16T18:50:08.026+0000] {local_task_job_runner.py:211} ERROR - Heartbeat time limit exceeded!
+[2026-03-16T18:50:09.274+0000] {process_utils.py:131} INFO - Sending 15 to group 1434. PIDs of all processes in the group: [1435, 1440, 1434]
+[2026-03-16T18:50:10.792+0000] {process_utils.py:86} INFO - Sending the signal 15 to group 1434
+[2026-03-16T18:50:12.762+0000] {taskinstance.py:2450} ERROR - Received SIGTERM. Terminating subprocesses.
+[2026-03-16T18:50:13.513+0000] {subprocess.py:104} INFO - Sending SIGTERM signal to process group
+[2026-03-16T18:50:16.615+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=1440, status='terminated', started='18:43:29') (1440) terminated with exit code None
+[2026-03-16T18:50:16.979+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 203, in execute
+    result = self.subprocess_hook.run_command(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/hooks/subprocess.py", line 91, in run_command
+    for raw_line in iter(self.sub_process.stdout.readline, b""):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 2452, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2026-03-16T18:50:17.082+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=pipeline_gps, task_id=task_process, execution_date=20260316T183500, start_date=20260316T184327, end_date=20260316T185017
+[2026-03-16T18:50:17.819+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 11 for task task_process (Task received SIGTERM signal; 1434)
+[2026-03-16T18:50:18.279+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=1435, status='terminated', started='18:43:27') (1435) terminated with exit code None
+[2026-03-16T18:50:18.302+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=1434, status='terminated', exitcode=1, started='18:43:27') (1434) terminated with exit code 1

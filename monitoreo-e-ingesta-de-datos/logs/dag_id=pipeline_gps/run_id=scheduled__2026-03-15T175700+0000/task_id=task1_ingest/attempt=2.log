@@ -1,0 +1,35 @@
+[2026-03-15T19:38:17.963+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pipeline_gps.task1_ingest scheduled__2026-03-15T17:57:00+00:00 [queued]>
+[2026-03-15T19:38:18.020+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pipeline_gps.task1_ingest scheduled__2026-03-15T17:57:00+00:00 [queued]>
+[2026-03-15T19:38:18.023+0000] {taskinstance.py:2170} INFO - Starting attempt 2 of 1
+[2026-03-15T19:38:18.167+0000] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): task1_ingest> on 2026-03-15 17:57:00+00:00
+[2026-03-15T19:38:18.233+0000] {standard_task_runner.py:60} INFO - Started process 49 to run task
+[2026-03-15T19:38:18.464+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'pipeline_gps', 'task1_ingest', 'scheduled__2026-03-15T17:57:00+00:00', '--job-id', '495', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_gps.py', '--cfg-path', '/tmp/tmpw4s1dvxa']
+[2026-03-15T19:38:18.481+0000] {standard_task_runner.py:88} INFO - Job 495: Subtask task1_ingest
+[2026-03-15T19:38:19.422+0000] {task_command.py:423} INFO - Running <TaskInstance: pipeline_gps.task1_ingest scheduled__2026-03-15T17:57:00+00:00 [running]> on host 693df5566a25
+[2026-03-15T19:38:20.589+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='pipeline_gps' AIRFLOW_CTX_TASK_ID='task1_ingest' AIRFLOW_CTX_EXECUTION_DATE='2026-03-15T17:57:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-15T17:57:00+00:00'
+[2026-03-15T19:38:20.607+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-03-15T19:38:20.621+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\n        export DB_HOST=postgres-postgis\n        export MQTT_HOST=mqtt-broker\n        python /opt/airflow/ingestion/mqtt_ingestor.py\n        ']
+[2026-03-15T19:38:20.747+0000] {subprocess.py:86} INFO - Output:
+[2026-03-15T19:38:22.853+0000] {local_task_job_runner.py:121} ERROR - Received SIGTERM. Terminating subprocesses
+[2026-03-15T19:38:22.887+0000] {process_utils.py:131} INFO - Sending Signals.SIGTERM to group 49. PIDs of all processes in the group: [50, 51, 49]
+[2026-03-15T19:38:22.893+0000] {process_utils.py:86} INFO - Sending the signal Signals.SIGTERM to group 49
+[2026-03-15T19:38:22.894+0000] {taskinstance.py:2450} ERROR - Received SIGTERM. Terminating subprocesses.
+[2026-03-15T19:38:22.895+0000] {subprocess.py:104} INFO - Sending SIGTERM signal to process group
+[2026-03-15T19:38:23.017+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 203, in execute
+    result = self.subprocess_hook.run_command(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/hooks/subprocess.py", line 91, in run_command
+    for raw_line in iter(self.sub_process.stdout.readline, b""):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 2452, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2026-03-15T19:38:23.044+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=pipeline_gps, task_id=task1_ingest, execution_date=20260315T175700, start_date=20260315T193817, end_date=20260315T193823
+[2026-03-15T19:38:23.179+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 495 for task task1_ingest (Task received SIGTERM signal; 49)
+[2026-03-15T19:38:23.228+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=50, status='terminated', started='19:38:20') (50) terminated with exit code None
+[2026-03-15T19:38:23.230+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=51, status='terminated', started='19:38:20') (51) terminated with exit code None
+[2026-03-15T19:38:23.248+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=49, status='terminated', exitcode=1, started='19:38:18') (49) terminated with exit code 1
+[2026-03-15T19:38:23.249+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 143
+[2026-03-15T19:38:23.444+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
