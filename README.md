@@ -1,4 +1,5 @@
-# 🚛 Monitoreo e Ingesta de Datos GPS
+## Monitoreo e Ingesta de Datos GPS ##
+[![logo.png](https://i.postimg.cc/C1DCGdjj/logo.png)](https://postimg.cc/yg1SB1pd)
 
 Sistema completo de procesamiento de datos GPS en tiempo real utilizando una arquitectura de microservicios con Docker, Apache Airflow, Apache Spark, MQTT, Kafka, PostgreSQL, Prometheus y Grafana.
 
