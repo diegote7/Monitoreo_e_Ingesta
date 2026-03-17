@@ -1,4 +1,5 @@
-# 🚛 Monitoreo e Ingesta de Datos GPS
+## Monitoreo e Ingesta de Datos GPS ##
+[![logo.png](https://i.postimg.cc/C1DCGdjj/logo.png)](https://postimg.cc/yg1SB1pd)
 
 Sistema completo de procesamiento de datos GPS en tiempo real utilizando una arquitectura de microservicios con Docker, Apache Airflow, Apache Spark, MQTT, Kafka, PostgreSQL, Prometheus y Grafana.
 
@@ -24,6 +25,7 @@ Este proyecto implementa un pipeline de datos para simular, ingerir, procesar y 
 | **cAdvisor** | 0.47.0 | Monitoreo de contenedores |
 
 ## 📁 **Estructura del Proyecto**
+[![estructura.png](https://i.postimg.cc/cHjjHKdy/estructura.png)](https://postimg.cc/62rzbp7Y)
 
 ## ⚙️ **Configuración e Instalación**
 
@@ -99,5 +101,5 @@ Comunidad de Apache Spark
 Docker por su excelente plataforma
 
 📧 Contacto
-Para preguntas o sugerencias: tu-email@ejemplo.com
+Para preguntas o sugerencias: diegofender777@hotmail.com
 
