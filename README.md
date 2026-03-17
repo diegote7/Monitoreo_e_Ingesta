@@ -24,62 +24,7 @@ Este proyecto implementa un pipeline de datos para simular, ingerir, procesar y 
 | **cAdvisor** | 0.47.0 | Monitoreo de contenedores |
 
 ## 📁 **Estructura del Proyecto**
-/home/nsx/monitoreo-e-ingesta-de-datos
-├── airflow
-│   ├── airflow-webserver.pid
-│   ├── airflow.cfg
-│   ├── airflow.db
-│   ├── dags
-│   ├── logs
-│   ├── plugins
-│   └── webserver_config.py
-├── airflow-webserver.pid
-├── airflow.cfg
-├── airflow.db
-├── dags
-│   ├── __pycache__
-│   └── pipeline_gps.py
-├── dashboard
-├── dashboards
-├── data
-│   ├── processed
-│   └── raw
-├── database
-├── docker
-│   ├── Dockerfile.airflow
-│   ├── docker-compose.yml
-│   └── init-db.sql
-├── ingestion
-│   ├── gps_simulator.py
-│   ├── kafka_consumer.py
-│   ├── kafka_producer.py
-│   └── mqtt_ingestor.py
-├── logs
-│   ├── dag_id=pipeline_gps
-│   ├── dag_processor_manager
-│   └── scheduler
-├── monitoring
-│   └── prometheus.yml
-├── plugins
-├── process
-├── requirements.txt
-├── simulator
-├── spark
-│   ├── jars
-│   ├── spark_processor.py
-│   └── spark_processor.py.bak
-├── store
-├── venv
-│   ├── bin
-│   ├── include
-│   ├── lib
-│   ├── lib64 -> lib
-│   ├── pyvenv.cfg
-│   └── share
-└── webserver_config.py
-
-30 directories, 23 files
-
+[![estructura.png](https://i.postimg.cc/cHjjHKdy/estructura.png)](https://postimg.cc/62rzbp7Y)
 
 ## ⚙️ **Configuración e Instalación**
 
