@@ -1,25 +1,62 @@
 name: monitoreo-e-ingesta-de-datos
 
 services:
+  # ============================================
+  # TRAEFIK - Proxy Inverso
+  # ============================================
+  traefik:
+    image: traefik:latest
+    container_name: traefik
+    restart: unless-stopped
+    command:
+      - "--api.insecure=true"           
+      - "--providers.docker=true"       
+      - "--providers.docker.exposedbydefault=false"
+      - "--providers.docker.network=monitoreo-red"
+      - "--entrypoints.web.address=:80"
+      - "--log.level=INFO"
+    ports:
+      - "80:80"        
+      - "8082:8080"      
+    networks:
+      - monitoreo-red
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro  
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.traefik.rule=Host(`traefik.localhost`)"
+      - "traefik.http.routers.traefik.service=api@internal"
+      - "traefik.http.routers.traefik.entrypoints=web"
+    healthcheck:
+      test: ["CMD", "traefik", "healthcheck"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
 
+  # ============================================
+  # MQTT Broker
+  # ============================================
   mqtt:
     image: eclipse-mosquitto
     container_name: mqtt-broker
     ports:
-      - "1883:1883"
+      - "1883:1883"    
     networks:
       - monitoreo-red
     restart: unless-stopped
 
+  # ============================================
+  # PostgreSQL + PostGIS
+  # ============================================
   postgres:
     image: postgis/postgis:15-3.4
     container_name: postgres-postgis
     environment:
-      POSTGRES_USER: admin
-      POSTGRES_PASSWORD: admin
-      POSTGRES_DB: monitoreo
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
     ports:
-      - "5432:5432"
+      - "5432:5432"      
     volumes:
       - pgdata:/var/lib/postgresql/data
       - ./init-db.sql:/docker-entrypoint-initdb.d/init-db.sql
@@ -27,16 +64,19 @@ services:
       - monitoreo-red
     restart: unless-stopped
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U admin -d monitoreo"]
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
       interval: 10s
       timeout: 5s
       retries: 5
 
+  # ============================================
+  # Kafka
+  # ============================================
   kafka:
     image: apache/kafka:3.7.0
     container_name: kafka
     ports:
-      - "9092:9092"
+      - "9092:9092"      
     environment:
       KAFKA_NODE_ID: 1
       KAFKA_PROCESS_ROLES: broker,controller
@@ -49,23 +89,24 @@ services:
       - monitoreo-red
     restart: unless-stopped
 
+  # ============================================
+  # Airflow Webserver 
+  # ============================================
   airflow-webserver:
     build:
       context: .
       dockerfile: Dockerfile.airflow
     container_name: airflow-webserver
     restart: always
-    ports:
-      - "8080:8080"
     volumes:
       - /home/nsx/monitoreo-e-ingesta-de-datos:/opt/airflow
     environment:
       - AIRFLOW__CORE__EXECUTOR=LocalExecutor
-      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://admin:admin@postgres-postgis:5432/monitoreo
-      - AIRFLOW__WEBSERVER__SECRET_KEY=4SjT2mypdW7sqQa8QOwtPwhQebnYXIIRFF1+pEex
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres-postgis:5432/${POSTGRES_DB}
+      - AIRFLOW__WEBSERVER__SECRET_KEY=${AIRFLOW_SECRET_KEY}
       - AIRFLOW__CORE__EXECUTION_TIMEOUT=3600
       - AIRFLOW__CORE__LOAD_EXAMPLES=False
-      - AIRFLOW__WEBSERVER__BASE_URL=http://localhost:8080
+      - AIRFLOW__WEBSERVER__BASE_URL=http://airflow.localhost  
       - AIRFLOW__LOGGING__BASE_LOG_FOLDER=/opt/airflow/logs
       - AIRFLOW__LOGGING__REMOTE_LOGGING=False
       - AIRFLOW__WEBSERVER__EXPOSE_CONFIG=True
@@ -75,7 +116,15 @@ services:
     depends_on:
       postgres:
         condition: service_healthy
+    labels:  
+      - "traefik.enable=true"
+      - "traefik.http.routers.airflow.rule=Host(`airflow.localhost`)"
+      - "traefik.http.services.airflow.loadbalancer.server.port=8080"
+      - "traefik.http.routers.airflow.entrypoints=web"
 
+  # ============================================
+  # Airflow Scheduler 
+  # ============================================
   airflow-scheduler:
     build:
       context: .
@@ -86,8 +135,8 @@ services:
       - /home/nsx/monitoreo-e-ingesta-de-datos:/opt/airflow
     environment:
       - AIRFLOW__CORE__EXECUTOR=LocalExecutor
-      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://admin:admin@postgres-postgis:5432/monitoreo
-      - AIRFLOW__WEBSERVER__SECRET_KEY=4SjT2mypdW7sqQa8QOwtPwhQebnYXIIRFF1+pEex
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres-postgis:5432/${POSTGRES_DB}
+      - AIRFLOW__WEBSERVER__SECRET_KEY=${AIRFLOW_SECRET_KEY}
       - AIRFLOW__CORE__EXECUTION_TIMEOUT=3600
       - AIRFLOW__CORE__LOAD_EXAMPLES=False
       - AIRFLOW__LOGGING__BASE_LOG_FOLDER=/opt/airflow/logs
@@ -101,40 +150,56 @@ services:
       airflow-webserver:
         condition: service_started
 
+  # ============================================
+  # Grafana 
+  # ============================================
   grafana:
     image: grafana/grafana:10.2.2
     container_name: grafana
-    ports:
-      - "3001:3000"
     environment:
-      - GF_SECURITY_ADMIN_PASSWORD=admin
-      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_USER=${GF_SECURITY_ADMIN_USER}
+      - GF_SECURITY_ADMIN_PASSWORD=${GF_SECURITY_ADMIN_PASSWORD}
+      - GF_SERVER_ROOT_URL=http://grafana.localhost  
+      - GF_SERVER_SERVE_FROM_SUB_PATH=true
     volumes:
       - grafana-data:/var/lib/grafana
     networks:
       - monitoreo-red
     restart: unless-stopped
+    labels:  
+      - "traefik.enable=true"
+      - "traefik.http.routers.grafana.rule=Host(`grafana.localhost`)"
+      - "traefik.http.services.grafana.loadbalancer.server.port=3000"
+      - "traefik.http.routers.grafana.entrypoints=web"
 
+  # ============================================
+  # Prometheus 
+  # ============================================
   prometheus:
     image: prom/prometheus:v2.48.0
     container_name: prometheus
-    ports:
-      - "9090:9090"
     volumes:
       - ../monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
       - prometheus-data:/prometheus
     command:
       - '--config.file=/etc/prometheus/prometheus.yml'
       - '--storage.tsdb.path=/prometheus'
+      - '--web.external-url=http://prometheus.localhost'  
     networks:
       - monitoreo-red
     restart: unless-stopped
+    labels:  
+      - "traefik.enable=true"
+      - "traefik.http.routers.prometheus.rule=Host(`prometheus.localhost`)"
+      - "traefik.http.services.prometheus.loadbalancer.server.port=9090"
+      - "traefik.http.routers.prometheus.entrypoints=web"
 
+  # ============================================
+  # cAdvisor 
+  # ============================================
   cadvisor:
     image: gcr.io/cadvisor/cadvisor:v0.47.0
     container_name: cadvisor
-    ports:
-      - "8081:8080"
     volumes:
       - /:/rootfs:ro
       - /var/run:/var/run:ro
@@ -147,7 +212,15 @@ services:
     networks:
       - monitoreo-red
     restart: unless-stopped
+    labels:  
+      - "traefik.enable=true"
+      - "traefik.http.routers.cadvisor.rule=Host(`cadvisor.localhost`)"
+      - "traefik.http.services.cadvisor.loadbalancer.server.port=8080"
+      - "traefik.http.routers.cadvisor.entrypoints=web"
 
+# ============================================
+# Redes y Volúmenes 
+# ============================================
 networks:
   monitoreo-red:
     driver: bridge

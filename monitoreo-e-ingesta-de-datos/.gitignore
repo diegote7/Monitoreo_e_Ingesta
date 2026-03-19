@@ -1,0 +1,42 @@
+# Credenciales y secretos
+.env
+**/acme.json
+**/certificates/
+**/traefik/certificates/*.json
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+dist/
+build/
+
+# Docker
+.dockerignore
+**/docker-compose.override.yml
+
+# Logs
+*.log
+logs/
+**/logs/
+
+# Bases de datos
+*.db
+*.sqlite
+*.sqlite3
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Datos locales
+data/raw/
+data/processed/
+
+# Backups
+*.backup
+*.bak

@@ -1,0 +1,44 @@
+# traefik/config/traefik.yml
+global:
+  sendAnonymousUsage: false
+
+log:
+  level: INFO
+  format: common
+
+accessLog: {}
+
+api:
+  dashboard: true
+  debug: false
+
+entryPoints:
+  web:
+    address: ":80"
+    # Sin redirección HTTPS para entorno local
+    # http:
+    #   redirections:
+    #     entryPoint:
+    #       to: websecure
+    #       scheme: https
+    #       permanent: true
+  # websecure:
+  #   address: ":443"
+
+providers:
+  docker:
+    endpoint: "unix:///var/run/docker.sock"
+    exposedByDefault: false
+    network: monitoreo-red
+  file:
+    filename: /etc/traefik/config/dynamic.yml
+    watch: true
+
+# Let's Encrypt desactivado para entorno local
+# certificatesResolvers:
+#   letsencrypt:
+#     acme:
+#       email: diegofender777@hotmail.com
+#       storage: /certificates/acme.json
+#       httpChallenge:
+#         entryPoint: web
