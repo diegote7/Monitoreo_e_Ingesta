@@ -8,6 +8,7 @@ Sistema completo de procesamiento de datos GPS en tiempo real utilizando una arq
 Este proyecto implementa un pipeline de datos para simular, ingerir, procesar y visualizar datos GPS de flotas de camiones. Los datos son generados por un simulador, transmitidos vía MQTT, consumidos y almacenados en PostgreSQL, procesados con Apache Spark para calcular métricas agregadas, y finalmente orquestados con Apache Airflow. Todo el sistema es monitoreado con Prometheus y visualizado con Grafana.
 
 ## 🏗️ **Arquitectura**
+
 ```mermaid
 graph LR
     A[GPS Simulator<br/>Python/MQTT] --> B[MQTT Broker<br/>Mosquitto]
@@ -35,6 +36,7 @@ graph LR
     style I fill:#e8f5e9
     style J fill:#e8f5e9
     style K fill:#e8f5e9
+```
 
 **Flujo de datos:**
 1. **Simulador GPS** genera datos de camiones en movimiento
