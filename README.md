@@ -20,9 +20,11 @@ Este proyecto implementa un pipeline de datos para simular, ingerir, procesar y 
 | **PostgreSQL + PostGIS** | 15-3.4 | Base de datos espacial |
 | **MQTT (Mosquitto)** | Latest | Broker de mensajería ligera |
 | **Apache Kafka** | 3.7.0 | Streaming de datos |
+| **Traefik** | 36+ | Proxy inverso y balanceador de carga |
 | **Prometheus** | 2.48.0 | Monitoreo y métricas |
 | **Grafana** | 10.2.2 | Visualización de datos |
 | **cAdvisor** | 0.47.0 | Monitoreo de contenedores |
+| **Jaeger** | Latest | Tracing distribuido |
 
 ## 📁 **Estructura del Proyecto**
 [![estructura.png](https://i.postimg.cc/cHjjHKdy/estructura.png)](https://postimg.cc/62rzbp7Y)
