@@ -9,6 +9,32 @@ Este proyecto implementa un pipeline de datos para simular, ingerir, procesar y 
 
 ## 🏗️ **Arquitectura**
 
+┌─────────────────┐ ┌──────────────┐ ┌─────────────────┐ ┌─────────────────┐
+│ GPS Simulator │────▶│ MQTT Broker │────▶│ MQTT Ingestor │────▶│ PostgreSQL │
+│ (Python/MQTT) │ │ (Mosquitto) │ │ (Python/DB) │ │ (PostGIS) │
+└─────────────────┘ └──────────────┘ └─────────────────┘ └────────┬────────┘
+│
+▼
+┌─────────────────┐ ┌──────────────┐ ┌─────────────────┐ ┌─────────────────┐
+│ Grafana │◀────│ Traefik │◀────│ Airflow │◀────│ Spark │
+│ Dashboards │ │ Proxy Inverso│ │ Orquestador │ │ Procesador │
+└─────────────────┘ └──────────────┘ └─────────────────┘ └─────────────────┘
+│
+▼
+┌─────────────────┐
+│ Prometheus │
+│ & cAdvisor │
+│ (Monitoreo) │
+└─────────────────┘
+
+**Flujo de datos:**
+1. **Simulador GPS** genera datos de camiones en movimiento
+2. **MQTT Broker** recibe y distribuye los mensajes
+3. **MQTT Ingestor** consume y persiste datos crudos en PostgreSQL
+4. **Spark** procesa los datos calculando métricas (velocidad promedio, máxima, mínima)
+5. **Airflow** orquesta todo el pipeline con reintentos automáticos
+6. **Traefik** unifica el acceso a todos los servicios web
+7. **Prometheus + Grafana** monitorean el estado del sistema
 
 ## 🚀 **Tecnologías Utilizadas**
 
@@ -25,6 +51,29 @@ Este proyecto implementa un pipeline de datos para simular, ingerir, procesar y 
 | **Grafana** | 10.2.2 | Visualización de datos |
 | **cAdvisor** | 0.47.0 | Monitoreo de contenedores |
 | **Jaeger** | Latest | Tracing distribuido |
+
+## 🌐 **Proxy Inverso con Traefik**
+
+El sistema utiliza **Traefik** como puerta de entrada única para todos los servicios web, ofreciendo:
+
+- **Dashboard** para monitoreo visual de rutas y servicios
+- **Access Logs** con registro detallado de todas las peticiones
+- **Métricas Prometheus** para exportación automática
+- **Tracing** integrado con Jaeger
+- **Descubrimiento automático** de nuevos servicios
+
+### Servicios expuestos vía Traefik
+
+| Servicio | URL de acceso (configurable) |
+|----------|------------------------------|
+| **Traefik Dashboard** | `traefik.localhost` |
+| **Apache Airflow** | `airflow.localhost` |
+| **Grafana** | `grafana.localhost` |
+| **Prometheus** | `prometheus.localhost` |
+| **cAdvisor** | `cadvisor.localhost` |
+
+> **Nota:** Las URLs y credenciales se configuran mediante archivo `.env` local.
+
 
 ## 📁 **Estructura del Proyecto**
 [![estructura.png](https://i.postimg.cc/cHjjHKdy/estructura.png)](https://postimg.cc/62rzbp7Y)
@@ -45,7 +94,6 @@ Este proyecto implementa un pipeline de datos para simular, ingerir, procesar y 
 git clone https://github.com/tu-usuario/monitoreo-e-ingesta-de-datos.git
 cd monitoreo-e-ingesta-de-datos
 
-
 ## ⚙️ **Configuración e Instalación**
 
 ### Prerrequisitos
@@ -62,6 +110,31 @@ cd monitoreo-e-ingesta-de-datos
 git clone https://github.com/tu-usuario/monitoreo-e-ingesta-de-datos.git
 cd monitoreo-e-ingesta-de-datos
 
+📊 Modelo de Datos
+Tabla	Propósito
+gps_data	Datos GPS crudos (latitud, longitud, velocidad, timestamp)
+gps_metrics	Métricas procesadas por Spark (velocidad promedio, máxima, mínima)
+gps_alerts	Alertas y eventos del sistema
+gps_positions	Posiciones detalladas con heading y altitud
+
+📈 Monitoreo y Observabilidad
+El stack de monitoreo completo incluye:
+
+Herramienta	Función
+Prometheus	Recolección de métricas
+Grafana	Visualización de dashboards
+cAdvisor	Métricas de contenedores
+Jaeger	Tracing distribuido
+Traefik	Logs de acceso y métricas del proxy
+Métricas recolectadas
+Contenedores: CPU, memoria, red, disco
+
+Servicios: Tiempo de respuesta, peticiones por segundo, errores
+
+Base de datos: Conexiones activas, tiempo de consultas
+
+Pipeline: Datos procesados, tiempo de ejecución, fallos
+
 📚 Documentación Adicional
 Apache Airflow Documentation
 
@@ -72,6 +145,33 @@ PostgreSQL Documentation
 Prometheus Documentation
 
 Grafana Documentation
+
+# PostgreSQL
+POSTGRES_USER=tu_usuario
+POSTGRES_PASSWORD=tu_password
+POSTGRES_DB=monitoreo
+
+# Airflow
+AIRFLOW_SECRET_KEY=tu_clave_secreta
+
+# Grafana
+GF_SECURITY_ADMIN_USER=admin
+GF_SECURITY_ADMIN_PASSWORD=tu_password
+
+🐛 Solución de Problemas Comunes
+Problema	Posible solución
+Traefik no sirve métricas	Verificar entryPoints en traefik/config/traefik.yml
+Error de conexión a PostgreSQL	Verificar red Docker: docker network inspect monitoreo-red
+Airflow no inicia	Ejecutar airflow db init y crear usuario admin
+Grafana no conecta a PostgreSQL	Usar nombre del contenedor como host y SSL mode disable
+
+📚 Documentación Adicional
+Apache Airflow Documentation
+Apache Spark Documentation
+PostgreSQL Documentation
+Prometheus Documentation
+Grafana Documentation
+Traefik Documentation
 
 🤝 Contribuciones
 Las contribuciones son bienvenidas. Por favor:
