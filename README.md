@@ -8,24 +8,33 @@ Sistema completo de procesamiento de datos GPS en tiempo real utilizando una arq
 Este proyecto implementa un pipeline de datos para simular, ingerir, procesar y visualizar datos GPS de flotas de camiones. Los datos son generados por un simulador, transmitidos vía MQTT, consumidos y almacenados en PostgreSQL, procesados con Apache Spark para calcular métricas agregadas, y finalmente orquestados con Apache Airflow. Todo el sistema es monitoreado con Prometheus y visualizado con Grafana.
 
 ## 🏗️ **Arquitectura**
-
-┌─────────────────┐ ┌──────────────┐ ┌─────────────────┐ ┌─────────────────┐
-│ GPS Simulator │────▶│ MQTT Broker │────▶│ MQTT Ingestor │────▶│ PostgreSQL │
-│ (Python/MQTT) │ │ (Mosquitto) │ │ (Python/DB) │ │ (PostGIS) │
-└─────────────────┘ └──────────────┘ └─────────────────┘ └────────┬────────┘
-│
-▼
-┌─────────────────┐ ┌──────────────┐ ┌─────────────────┐ ┌─────────────────┐
-│ Grafana │◀────│ Traefik │◀────│ Airflow │◀────│ Spark │
-│ Dashboards │ │ Proxy Inverso│ │ Orquestador │ │ Procesador │
-└─────────────────┘ └──────────────┘ └─────────────────┘ └─────────────────┘
-│
-▼
-┌─────────────────┐
-│ Prometheus │
-│ & cAdvisor │
-│ (Monitoreo) │
-└─────────────────┘
+```mermaid
+graph LR
+    A[GPS Simulator<br/>Python/MQTT] --> B[MQTT Broker<br/>Mosquitto]
+    B --> C[MQTT Ingestor<br/>Python/DB]
+    C --> D[(PostgreSQL<br/>PostGIS)]
+    
+    D --> E[Spark<br/>Procesador]
+    E --> F[Airflow<br/>Orquestador]
+    
+    F --> G[Traefik<br/>Proxy Inverso]
+    
+    G --> H[Grafana<br/>Dashboards]
+    G --> I[Prometheus<br/>Monitoreo]
+    G --> J[cAdvisor<br/>Contenedores]
+    G --> K[Jaeger<br/>Tracing]
+    
+    style A fill:#e1f5fe
+    style B fill:#e1f5fe
+    style C fill:#e1f5fe
+    style D fill:#fff3e0
+    style E fill:#f3e5f5
+    style F fill:#f3e5f5
+    style G fill:#e8f5e9
+    style H fill:#e8f5e9
+    style I fill:#e8f5e9
+    style J fill:#e8f5e9
+    style K fill:#e8f5e9
 
 **Flujo de datos:**
 1. **Simulador GPS** genera datos de camiones en movimiento
