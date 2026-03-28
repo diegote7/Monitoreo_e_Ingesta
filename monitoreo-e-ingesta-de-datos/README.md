@@ -23,3 +23,8 @@
 [![cadvisor1.png](https://i.postimg.cc/N0t23bT1/cadvisor1.png)](https://postimg.cc/Wd94rG53)
 
 [![cadvisor2.png](https://i.postimg.cc/kG22QHrL/cadvisor2.png)](https://postimg.cc/ctN1ZXLc)
+
+## PROXI TRAEFIK ##
+[![1.png](https://i.postimg.cc/6QftnPDX/1.png)](https://postimg.cc/gwjCPgzS)
+
+[![2.png](https://i.postimg.cc/RhNmrZhp/2.png)](https://postimg.cc/4HkqVZzp)
