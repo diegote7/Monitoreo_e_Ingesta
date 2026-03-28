@@ -62,14 +62,6 @@ cd monitoreo-e-ingesta-de-datos
 git clone https://github.com/tu-usuario/monitoreo-e-ingesta-de-datos.git
 cd monitoreo-e-ingesta-de-datos
 
-🌐 Acceso a Servicios
-Servicio	URL	Credenciales
-Airflow	http://localhost:8080	admin / admin
-Grafana	http://localhost:3001	admin / admin
-Prometheus	http://localhost:9090	-
-cAdvisor	http://localhost:8081	-
-PostgreSQL	localhost:5432	admin / admin
-
 📚 Documentación Adicional
 Apache Airflow Documentation
 
